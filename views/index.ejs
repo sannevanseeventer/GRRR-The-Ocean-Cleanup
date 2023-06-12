@@ -23,13 +23,13 @@
                 <button onclick="switchProjection()">2d/3d</button> -->
             </div>
 
-            <div class="textblock">
+            <div id="infoContainer" class="textblock hide">
                 <img src="">
-                <% data.forEach(systems => { %>
+                <% data.systems.forEach(system=> { if (system.id == 251) { %>
                     <h2>
-                        <%= data.systems.name %>
+                        <%= system.name %>
                     </h2>
-                    <% }); %>
+                    <% } }); %>
                         <p>status_label</p>
                         <h3>location_description</h3>
 

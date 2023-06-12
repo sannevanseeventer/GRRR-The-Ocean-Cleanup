@@ -1,5 +1,6 @@
 import { log } from 'console'
 import express from 'express'
+import fetch from 'node-fetch'
 
 // Maak een nieuwe express app
 const app = express()
@@ -9,13 +10,16 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 app.use(express.static('public'))
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const connectionJson = "https://s3.eu-west-1.amazonaws.com/data.theoceancleanup.com/systems-dashboard/realtime-data-river.json"
 
 // Maak een route voor de index
 app.get('/', (request, response) => {
   fetchJson(connectionJson).then((data) => {
-    response.render('index', { data })
     console.log(data)
+    response.render('index', { data: data })
   })
 })
 
@@ -30,8 +34,9 @@ app.listen(app.get('port'), function () {
  * @param {*} url the api endpoint to address
  * @returns the json response from the api endpoint
  */
+
 async function fetchJson(url) {
-  return await fetch(url)
-    .then((response) => response.json())
-    .catch((error) => error)
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
 }

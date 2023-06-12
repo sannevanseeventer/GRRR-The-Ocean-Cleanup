@@ -321,5 +321,8 @@ p {
   margin-bottom: 5rem;
   margin-right: 1rem;
   margin-left: 1rem;
+}
 
+.hide {
+  display: none;
 }
