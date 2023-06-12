@@ -1,6 +1,5 @@
+import { log } from 'console'
 import express from 'express'
-
-const url = 'https://s3.eu-west-1.amazonaws.com/data.theoceancleanup.com/'
 
 // Maak een nieuwe express app
 const app = express()
@@ -10,13 +9,13 @@ app.set('view engine', 'ejs')
 app.set('views', './views')
 app.use(express.static('public'))
 
+const connectionJson = "https://s3.eu-west-1.amazonaws.com/data.theoceancleanup.com/systems-dashboard/realtime-data-river.json"
+
 // Maak een route voor de index
 app.get('/', (request, response) => {
-  let slug = request.query.slug || 'data.theoceancleanup.com/systems-dashboard/realtime-data-ocean.json'
-  let dataUrl = url + slug
-
-  fetchJson(dataUrl).then((data) => {
-    response.render('index', data)
+  fetchJson(connectionJson).then((data) => {
+    response.render('index', { data })
+    console.log(data)
   })
 })
 
@@ -36,5 +35,3 @@ async function fetchJson(url) {
     .then((response) => response.json())
     .catch((error) => error)
 }
-
-

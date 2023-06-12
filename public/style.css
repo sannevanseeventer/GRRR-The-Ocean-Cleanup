@@ -231,198 +231,6 @@ p {
   transform: rotate(180deg);
 }
 
-
-/* Globe */
-/* #worldmap {
-  display: flex;
-  justify-content: space-around;
-}
-
-#worldmap svg {
-  background: var(--Primary-blue);
-  border-radius: 200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-.land {
-  fill: #DDDCDC;
-} */
-
-
-#globe {
-  cursor: move;
-}
-
-#current {
-  position: absolute;
-  color: #F6C1BC;
-  font-family: Verdana;
-  margin-left: 40%;
-  margin-top: 2%;
-}
-
-.system {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  -webkit-transform: rotateX(75deg) rotateY(-30deg);
-  transform: rotateX(75deg) rotateY(-30deg);
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-.planet,
-.satellite-orbit,
-.satellite {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-@-webkit-keyframes orbit {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes orbit {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@-webkit-keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@-moz-keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@-ms-keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@keyframes move-clouds-back {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 10000px 0;
-  }
-}
-
-@-webkit-keyframes move-clouds-back {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 10000px 0;
-  }
-}
-
-@-moz-keyframes move-clouds-back {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 10000px 0;
-  }
-}
-
-@-ms-keyframes move-clouds-back {
-  from {
-    background-position: 0;
-  }
-
-  to {
-    background-position: 10000px 0;
-  }
-}
-
-.stars,
-.twinkling,
-.clouds {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.stars {
-  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-  z-index: 0;
-}
-
-.twinkling {
-  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-  z-index: 1;
-
-  -moz-animation: move-twink-back 200s linear infinite;
-  -ms-animation: move-twink-back 200s linear infinite;
-  -o-animation: move-twink-back 200s linear infinite;
-  -webkit-animation: move-twink-back 200s linear infinite;
-  animation: move-twink-back 200s linear infinite;
-}
-
-.clouds {
-  background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
-  z-index: 3;
-
-  -moz-animation: move-clouds-back 200s linear infinite;
-  -ms-animation: move-clouds-back 200s linear infinite;
-  -o-animation: move-clouds-back 200s linear infinite;
-  -webkit-animation: move-clouds-back 200s linear infinite;
-  animation: move-clouds-back 200s linear infinite;
-}
-
 /* For 2K & 4K resolutions */
 @media screen and (min-width: 2048px) {
   body {
@@ -504,4 +312,14 @@ p {
 .dash-info {
   grid-area: dash-info;
   position: relative;
+}
+
+.textblock {
+  background-color: white;
+  box-shadow: rgb(219, 219, 219) 0px 0px 8px;
+  padding: 1rem;
+  margin-bottom: 5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+
 }
