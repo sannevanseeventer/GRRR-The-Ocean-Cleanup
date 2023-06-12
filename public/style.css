@@ -1,0 +1,507 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@font-face {
+  font-family: 'Proxima';
+  font-weight: bold;
+  src: url("/ProximaNovaFont.otf") format("opentype");
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(228, 81%, 49%);
+  --title-color: hsl(228, 12%, 15%);
+  --text-color: hsl(228, 8%, 50%);
+  --body-color: hsl(228, 100%, 99%);
+  --Primary-blue: #5CC8DE;
+  --Dark-blue: #143653;
+  --container-color: #fff;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Proxima', sans-serif;
+  --normal-font-size: .938rem;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--Dark-blue);
+}
+
+h1 {
+  color: var(--title-color);
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+  color: var(--Dark-blue);
+}
+
+h3 {
+  font-size: 0.9rem;
+  color: var(--Dark-blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: .85rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: var(--Dark-blue);
+}
+
+.line {
+  height: 2px;
+  width: 20%;
+  background-color: var(--Primary-blue);
+  margin-top: .2rem;
+  margin-bottom: .7rem;
+}
+
+
+/*=============== NAV ===============*/
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+@media screen and (max-width: 767px) {
+
+  .nav-logo,
+  .nav-toggle,
+  .nav-name {
+    display: none;
+  }
+
+  .nav-list {
+    position: fixed;
+    bottom: 0rem;
+    background-color: var(--container-color);
+    box-shadow: 0 8px 24px hsla(228, 81%, 24%, .15);
+    width: 100%;
+    padding: 1.3rem .8rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 36px;
+    transition: .4s;
+    z-index: 2;
+  }
+}
+
+.nav-link {
+  display: flex;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: .3s;
+}
+
+.nav-link i {
+  font-size: 1.5rem;
+}
+
+.nav-link:hover {
+  color: var(--Primary-blue);
+}
+
+/* Active link */
+.active-link {
+  color: var(--Primary-blue);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .nav-list {
+    column-gap: 20px;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav-list {
+    width: 332px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .container {
+    margin-left: 7rem;
+    margin-right: 1.5rem;
+  }
+
+  main {
+    width: 80%;
+    float: right;
+  }
+
+  .nav {
+    width: 15%;
+    position: fixed;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 1px 0 4px hsla(228, 81%, 49%, .15);
+    width: 220px;
+    height: 100vh;
+    padding: 1.9rem;
+    transition: .3s;
+  }
+
+  .nav-logo {
+    display: flex;
+    /* background-color: var(--Primary-blue); */
+    width: 10rem;
+  }
+
+  .nav-logo-img {
+    padding: 0;
+  }
+
+  .nav-logo,
+  .nav-link {
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  .nav-list {
+    display: grid;
+    row-gap: 2.5rem;
+    margin-top: 10.5rem;
+  }
+
+  .nav-content {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--title-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.20rem;
+    display: grid;
+    place-items: center;
+    top: 2rem;
+    right: -10px;
+    cursor: pointer;
+    transition: .4s;
+  }
+}
+
+/* Show menu */
+.show-menu {
+  width: 84px;
+}
+
+/* Rotate toggle icon */
+.rotate-icon {
+  transform: rotate(180deg);
+}
+
+
+/* Globe */
+/* #worldmap {
+  display: flex;
+  justify-content: space-around;
+}
+
+#worldmap svg {
+  background: var(--Primary-blue);
+  border-radius: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.land {
+  fill: #DDDCDC;
+} */
+
+
+#globe {
+  cursor: move;
+}
+
+#current {
+  position: absolute;
+  color: #F6C1BC;
+  font-family: Verdana;
+  margin-left: 40%;
+  margin-top: 2%;
+}
+
+.system {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  -webkit-transform: rotateX(75deg) rotateY(-30deg);
+  transform: rotateX(75deg) rotateY(-30deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.planet,
+.satellite-orbit,
+.satellite {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@-webkit-keyframes orbit {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+@-webkit-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+@-moz-keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+@-ms-keyframes move-clouds-back {
+  from {
+    background-position: 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+.stars,
+.twinkling,
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index: 0;
+}
+
+.twinkling {
+  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index: 1;
+
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+  background: transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+  z-index: 3;
+
+  -moz-animation: move-clouds-back 200s linear infinite;
+  -ms-animation: move-clouds-back 200s linear infinite;
+  -o-animation: move-clouds-back 200s linear infinite;
+  -webkit-animation: move-clouds-back 200s linear infinite;
+  animation: move-clouds-back 200s linear infinite;
+}
+
+/* For 2K & 4K resolutions */
+@media screen and (min-width: 2048px) {
+  body {
+    zoom: 1.7;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  body {
+    zoom: 2.5;
+  }
+}
+
+
+.ocean {
+  fill: var(--Primary-blue);
+}
+
+.land {
+  fill: #DDDCDC;
+}
+
+.boundary {
+  fill: none;
+  stroke: #9fa8ad;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* Layout and grid styling */
+.background-container {
+  height: 100vh;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: .2fr 4fr;
+  grid-auto-flow: row;
+  height: 84%;
+  padding: 1rem;
+  gap: 1rem;
+  grid-template-areas:
+    "logo-cleanup subtotal"
+    "dash-info dash-info"
+
+}
+
+.panel {
+  color: black;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: rgb(219, 219, 219) 0px 0px 8px;
+  transition: .2s;
+  position: relative;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-cleanup {
+  background-color: #5CC8DE;
+  grid-area: logo-cleanup;
+}
+
+.logo-cleanup img {
+  width: 6rem;
+  justify-self: center;
+}
+
+.subtotal {
+  grid-area: subtotal;
+  position: relative;
+}
+
+.dash-info {
+  grid-area: dash-info;
+  position: relative;
+}

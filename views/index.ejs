@@ -1,0 +1,40 @@
+<%- include('./partials/head.ejs') %>
+
+
+    <main>
+        <div class="background-container">
+            <div class="main-grid">
+                <section class="panel logo-cleanup">
+                    <%- include('./partials/logoCleanup') %>
+                </section>
+                <section class="panel subtotal">
+                    <%- include('./partials/subTotal') %>
+                </section>
+                <section class="panel dash-info">
+                    <%- include('./partials/dashInfo') %>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- 
+        <section id="turnglobe">
+
+            <div id="worldmap"></div>
+
+        </section> -->
+        <div id="svgDiv"></div>
+        <div style="position:relative;padding:5px;top:0">
+            <button onclick="switchProjection()">2d/3d</button>
+        </div>
+
+
+
+    </main>
+
+
+
+
+    <%- include('./partials/nav.ejs') %>
+
+        <%- include('./partials/foot.ejs') %>
