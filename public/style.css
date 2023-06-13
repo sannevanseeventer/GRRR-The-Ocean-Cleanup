@@ -40,6 +40,7 @@
 }
 
 body {
+  top: 4rem;
   position: relative;
   font-family: var(--body-font);
   background-color: var(--body-color);
@@ -60,6 +61,13 @@ h2 {
 h3 {
   font-size: 0.9rem;
   color: var(--Dark-blue);
+}
+
+span {
+  font-size: .9rem;
+  color: var(--Dark-blue);
+  font-weight: bold;
+  font-family: 'Proxima';
 }
 
 a {
@@ -100,22 +108,33 @@ p {
     display: none;
   }
 
-  .nav-list {
+  .nav-container {
     position: fixed;
-    bottom: 0rem;
+    top: 0;
     background-color: var(--container-color);
-    box-shadow: 0 8px 24px hsla(228, 81%, 24%, .15);
-    width: 100%;
-    padding: 1.3rem .8rem;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    box-shadow: 0 1px 10px hsla(228, 81%, 24%, .15);
+    width: 100vw;
+    height: 4rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    column-gap: 36px;
     transition: .4s;
     z-index: 2;
+  }
+
+  .logo {
+    width: 7.5rem;
+    height: auto;
+    background-color: var(--Primary-blue);
+    padding: 1rem;
+    left: 0;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    margin: 0 auto;
   }
 }
 
@@ -155,6 +174,11 @@ p {
 }
 
 @media screen and (min-width: 767px) {
+
+  body {
+    top: 0;
+  }
+
   .container {
     margin-left: 7rem;
     margin-right: 1.5rem;
@@ -177,10 +201,8 @@ p {
     transition: .3s;
   }
 
-  .nav-logo {
-    display: flex;
-    /* background-color: var(--Primary-blue); */
-    width: 10rem;
+  .logo {
+    display: none;
   }
 
   .nav-logo-img {
@@ -274,7 +296,7 @@ p {
   padding: 1rem;
   gap: 1rem;
   grid-template-areas:
-    "logo-cleanup subtotal"
+    "empty subtotal"
     "dash-info dash-info"
 
 }
@@ -286,22 +308,6 @@ p {
   box-shadow: rgb(219, 219, 219) 0px 0px 8px;
   transition: .2s;
   position: relative;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-cleanup {
-  background-color: #5CC8DE;
-  grid-area: logo-cleanup;
-}
-
-.logo-cleanup img {
-  width: 6rem;
-  justify-self: center;
 }
 
 .subtotal {
@@ -326,3 +332,5 @@ p {
 .hide {
   display: none;
 }
+
+/* TEST */

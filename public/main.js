@@ -39,11 +39,11 @@ var drag = d3.drag()
 var gpos0, o0, gpos1, o1;
 svg.call(drag);
 
-var zoom = d3.zoom()
+// var zoom = d3.zoom()
 
-    .on("zoom", zoomed);
+//     .on("zoom", zoomed);
 
-svg.call(zoom);
+// svg.call(zoom);
 
 d3.json("https://gist.githubusercontent.com/sarah37/dcca42b936545d9ee9f0bc8052e03dbd/raw/550cfee8177df10e515d82f7eb80bce4f72c52de/world-110m.json").then(function (json) {
     map.append("path")
