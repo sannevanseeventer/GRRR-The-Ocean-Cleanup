@@ -1,78 +1,6 @@
 <%- include('./partials/head.ejs') %>
 
 
-    <!-- <div class="container" id="top"> -->
-
-    <!-- <aside class="sidebar-wrapper">
-
-            <div class="sidebar-header">
-                <img src="/logo-tocl.png" alt="Logo">
-                <div class="close-menu">
-                    <i class="fas fa-chevron-left"></i>
-                </div>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="#">
-                            <i class="bx bx-grid-alt"></i>
-                            <div class="title">dashboard</div>
-                        </a></li>
-                    <li><a href="#">
-                            <i class="bx bx-world"></i>
-                            <div class="title">map</div>
-                        </a></li>
-                    <li><a href="#">
-                            <i class="bx bx-bar-chart-square"></i>
-                            <div class="title">statics</div>
-                        </a></li>
-                    <button class="darkmode">
-                        <li><a href="#">
-                                <i class="ri-contrast-2-line"></i>
-                                <div class="title"><span id="darkmode-btn-text">light</span></div>
-                            </a></li>
-                    </button>
-                </ul>
-            </nav>
-        </aside>
-
-
-
-        <header>
-            <div class="header-wrapper">
-                <img src="/1200px-The_Ocean_Cleanup_logowhite.png" alt="Logo">
-
-                <div class="header-left"> -->
-    <!-- <div class="toggle-icon">
-                        <i class="fas fa-bars"></i>
-                    </div> -->
-
-
-    <!-- 
-
-                    <a href="#">
-                        <i class="bx bx-grid-alt"></i>
-                        <div class="nav-title">dashboard</div>
-                    </a>
-                    <a href="#">
-                        <i class="bx bx-world"></i>
-                        <div class="nav-title">map</div>
-                    </a> -->
-    <!-- <a href="#">
-                        <i class="bx bx-bar-chart-square"></i>
-                        <div class="nav-title">statics</div>
-                    </a> -->
-    <!-- <button class="darkmode">
-                        <a href="#">
-                            <i class="ri-contrast-2-line"></i>
-                            <div class="nav-title"><span id="darkmode-btn-text">light</span></div>
-                        </a>
-                    </button>
-                </div>
-
-            </div>
-        </header> -->
-
     <div class="navbar">
         <nav class="nav">
             <img src="/1200px-The_Ocean_Cleanup_logowhite.png">
@@ -80,20 +8,21 @@
             <ul class="nav-list">
                 <a href="#" class="nav-link active">
                     <i class='bx bx-grid-alt nav-icon'></i>
-
+                    <li>Dashboard</li>
                 </a>
                 <a href="#" class="nav-link">
                     <i class='bx bx-world nav-icon'></i>
-
+                    <li>Map</li>
                 </a>
 
                 <button class="darkmode">
                     <a href="#" class="nav-link">
-                        <i id="darkmode-btn-text" class='ri-contrast-2-line nav-icon'></i>
+                        <i class='ri-contrast-2-line nav-icon'></i>
+                        <li><span id="darkmode-btn-text">Light</span></li>
                     </a>
                 </button>
-            </ul>
         </nav>
+        </ul>
     </div>
 
     <main>
@@ -110,25 +39,13 @@
 
             <div class="menu">
                 <div class="line"></div>
-                <!-- <div class="menu-container">
-                    <a href="#">
-                        <li>General</li>
-                    </a>
-                    <a href="#">
-                        <li>Oceans</li>
-                    </a>
-                    <a href="#">
-                        <li>Rivers</li>
-                    </a>
-                </div> -->
             </div>
 
             <div class="panel box-1">
                 <h2>Total</h2>
-                <p>
-                    352.624.190 kg
-
-                </p>
+                <div class="col">
+                    <p class="count-num" data-count="600000000">353874119</p> kg
+                </div>
             </div>
 
             <div class="panel box-2">
@@ -145,6 +62,8 @@
                 </div>
 
                 <p>10 interceptors</p>
+
+
             </div>
 
             <div class="panel box-4">
@@ -163,7 +82,7 @@
             </div>
 
             <div class="panel grafiek">
-
+                <h3>Share dashboard</h3>
             </div>
 
             <div class="panel map">

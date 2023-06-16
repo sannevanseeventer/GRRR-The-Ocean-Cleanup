@@ -35,7 +35,7 @@ function toggleDarkMode() {
         root.style.setProperty('--lightGray', '#f7f7f7');
         root.style.setProperty('--textColor', '#143653');
         root.style.setProperty('--boxShadow', 'rgba(128, 128, 128, 0.132)');
-        // darkText.innerHTML = "Light";
+        darkText.innerHTML = "Light";
         initialTheme = false;
     } else {
         root.style.setProperty('--darkBlue', '#ffffff');
@@ -44,8 +44,28 @@ function toggleDarkMode() {
         root.style.setProperty('--lightGray', '#0D2437');
         root.style.setProperty('--textColor', '#ffffff');
         root.style.setProperty('--boxShadow', 'rgba(128, 128, 128, 0.0)');
-        // darkText.innerHTML = "Dark";
+        darkText.innerHTML = "Dark";
         initialTheme = true;
     }
 }
+
+// Counter
+$('.count-num').each(function () {
+    var $this = $(this),
+        countTo = $this.attr('data-count');
+
+    $({ countNum: $this.text() }).animate({
+        countNum: countTo
+    },
+        {
+            duration: 30000000000,
+            easing: 'linear',
+            step: function () {
+                $this.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+                $this.text(this.countNum);
+            }
+        });
+});
 
