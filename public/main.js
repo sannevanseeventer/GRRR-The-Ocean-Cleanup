@@ -69,3 +69,36 @@ $('.count-num').each(function () {
         });
 });
 
+
+// test map
+// (function ($) {
+//     $(document).ready(function () {
+//         $('.world-map__world').on('click', 'path', function () {
+//             var $thisContintent = $(this);
+//             $thisContintent.attr('data-selected', 'true');
+//             $thisContintent.siblings().attr('data-selected', 'false');
+//             $('.world-map').addClass('view-detail');
+//             $('.world-map__europe').addClass('active');
+//             $('.world-map__list--europe').addClass('active');
+//             $('.world-map__list').removeClass('active');
+//         });
+//         $('.world-map__close').on('click', function () {
+//             $('.world-map svg path').attr('data-selected', '');
+//             $('.world-map').removeClass('view-detail');
+//             $('.world-map__europe').removeClass('active');
+//             $('.world-map__list--europe').removeClass('active');
+//             $('.world-map__list').addClass('active');
+//         });
+//         $('.world-map__list').on('click', 'a', function () {
+//             $('.world-map svg path#europe').attr('data-selected', 'true');
+//             $('.world-map svg path#europe').siblings().attr('data-selected', 'false');
+//             $('.world-map').addClass('view-detail');
+//             $('.world-map__europe').addClass('active');
+//             $('.world-map__list--europe').addClass('active');
+//             $('.world-map__list').removeClass('active');
+//         });
+//     });
+// })(jQuery);
+
+
+
