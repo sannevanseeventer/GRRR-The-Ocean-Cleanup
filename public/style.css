@@ -624,16 +624,21 @@ tr {
 @media (min-width:1200px) {
   .container2 {
     margin: 5rem 2rem 2rem 22.3rem;
-    grid-template-columns: 1fr 1fr 1fr 2fr;
-    grid-template-rows: 0.01fr 0.1fr 0.3fr 0.6fr 0.6fr 0.6fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 0.01fr 0.1fr 0.3fr 0.4fr 0.6fr 0.6fr;
     grid-template-areas:
-      "menu menu menu menu"
-      "header-dashboard header-dashboard header-dashboard header-dashboard"
-      "dashboard-info dashboard-info map map"
-      "box-1 box-2 map map"
-      "box-3 box-4 share share"
-      "grafiek grafiek share share";
+      "menu menu menu menu menu"
+      "header-dashboard header-dashboard header-dashboard header-dashboard header-dashboard"
+      "dashboard-info dashboard-info map map map"
+      "box-1 box-2 map map map"
+      "box-3 box-4 map map map"
+      "share share grafiek more more";
   }
+
+  .more {
+    grid-area: more;
+  }
+
 
   .panel {
     padding: 2rem;
@@ -712,6 +717,29 @@ tr {
   .single-chart {
     width: 100%;
     justify-content: space-around;
+  }
+
+  .scroll-top {
+    display: none;
+  }
+
+  .amount h4 {
+    font-family: 'Roboto', monospace;
+    color: var(--lightBlue);
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  .map img {
+    margin: 8rem auto;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  tr {
+    height: 3.5rem;
   }
 
 

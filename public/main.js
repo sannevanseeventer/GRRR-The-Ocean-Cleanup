@@ -69,6 +69,9 @@ $('.count-num').each(function () {
         });
 });
 
+//grafiek
+
+
 // test map
 // (function ($) {
 //     $(document).ready(function () {
