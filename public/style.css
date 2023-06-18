@@ -36,9 +36,6 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
 h5,
 h6 {
   line-height: 1.2;
@@ -46,6 +43,19 @@ h6 {
   text-transform: uppercase;
   color: var(--darkBlue);
 }
+
+h2 {
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--darkBlue);
+  margin-bottom: .5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
 
 ul,
 li {
@@ -204,8 +214,8 @@ button {
     "map map"
     "box-1 box-2"
     "box-3 box-4"
-    "grafiek grafiek"
-    "share share";
+    "share share"
+    "grafiek grafiek";
 }
 
 .dashboard-info p {
@@ -245,11 +255,17 @@ button {
   font-family: 'Proxima', sans-serif;
 }
 
-
 .header-dashboard {
   display: flex;
   justify-content: space-between;
   grid-area: header-dashboard;
+}
+
+.col {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: .9rem;
 }
 
 .menu {
@@ -307,7 +323,7 @@ button {
 .box-3,
 .box-4,
 p {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: var(--lightBlue);
   font-family: 'Roboto Mono', monospace;
 }
@@ -317,9 +333,10 @@ p {
 .box-3,
 .box-4,
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   color: var(--darkBlue);
 }
+
 
 .panel {
   border-radius: .5rem;
@@ -343,6 +360,52 @@ h2 {
   text-transform: uppercase;
 }
 
+/* search bar */
+
+.search input {
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+  outline: none;
+  padding-left: .5rem;
+  background: var(--whiteColor);
+  box-shadow: var(--boxShadow) 0px 0px 8px;
+  border: none;
+  color: var(--textColor);
+}
+
+.search input::placeholder {
+  color: #888;
+  font-size: 1.3rem;
+}
+
+.search button {
+  width: 30px;
+  height: 25px;
+  border: none;
+  margin-right: 1.5rem;
+  border-radius: 0 5px 5px 0;
+  color: var(--textColor);
+  transition-property: all;
+  transition-duration: 0.5s;
+  position: absolute;
+  right: 0;
+  outline: none;
+}
+
+.search button i {
+  font-size: 1.2rem;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.search button:hover i {
+  transform: scale(1.1);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+
 /* Scroll to top */
 .scroll-top {
   position: absolute;
@@ -351,7 +414,7 @@ h2 {
   width: 3rem;
   height: 3rem;
   padding: .5rem;
-  background-color: var(--lightBlue);
+  background-color: var(--darkBlue);
   color: var(--whiteColor);
   display: flex;
   align-items: center;
@@ -363,7 +426,7 @@ h2 {
   font-size: var(--fs16);
 }
 
-/* Circle */
+/* Chart */
 
 .single-chart {
   width: 100%;
@@ -372,7 +435,8 @@ h2 {
 
 .circular-chart {
   display: block;
-  margin: 10px auto;
+  margin: 1.3rem auto;
+  margin-bottom: 0;
   max-width: 80%;
   max-height: 250px;
 }
@@ -407,14 +471,7 @@ h2 {
   text-anchor: middle;
 }
 
-
-
-
 /* Pulse */
-.status-pulse {
-  width: 10%;
-}
-
 .pulse {
   background: black;
   border-radius: 50%;
@@ -428,6 +485,18 @@ h2 {
   background: rgb(132, 206, 95);
   box-shadow: 0 0 0 0 rgb(132, 206, 95);
   animation: pulse-green 2s infinite;
+}
+
+.pulse.blue {
+  background: var(--lightBlue);
+  box-shadow: 0 0 0 0 var(--lightBlue);
+  animation: pulse-blue 2s infinite;
+}
+
+.pulse.gray {
+  background: rgb(176, 176, 176);
+  box-shadow: 0 0 0 0 rgb(176, 176, 176);
+  animation: pulse-gray 2s infinite;
 }
 
 .pulse-container {
@@ -452,6 +521,80 @@ h2 {
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
   }
+}
+
+
+@keyframes pulse-blue {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 var(--lightBlue);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(255, 82, 82, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+  }
+}
+
+
+@keyframes pulse-gray {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgb(176, 176, 176);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(255, 82, 82, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+  }
+}
+
+/* grafiek */
+
+
+/* Status */
+table {
+  width: 100%;
+}
+
+tr {
+  height: 2.5rem;
+}
+
+.dot {
+  width: 40%;
+}
+
+.status {
+  width: 30%;
+}
+
+.status-pulse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.amount h4 {
+  font-family: 'Roboto', monospace;
+  color: var(--lightBlue);
+  font-weight: 500;
+  font-size: 1.45rem;
+}
+
+.amount {
+  width: 20%;
 }
 
 /* Breakpoints medium screen */
@@ -494,6 +637,10 @@ h2 {
 
   .panel {
     padding: 2rem;
+  }
+
+  .map img {
+    width: 100%;
   }
 
   .box-1,
@@ -566,6 +713,7 @@ h2 {
     width: 100%;
     justify-content: space-around;
   }
+
 
   /* TEST */
 

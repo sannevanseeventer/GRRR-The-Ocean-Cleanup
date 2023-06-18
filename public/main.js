@@ -69,7 +69,6 @@ $('.count-num').each(function () {
         });
 });
 
-
 // test map
 // (function ($) {
 //     $(document).ready(function () {
