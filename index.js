@@ -23,6 +23,16 @@ app.get('/', (request, response) => {
   })
 })
 
+// Maak een route voor de index
+app.get('/map', (request, response) => {
+  fetchJson(connectionJson).then((data) => {
+    console.log(data)
+    response.render('map', { data: data })
+  })
+})
+
+
+
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
 app.listen(app.get('port'), function () {

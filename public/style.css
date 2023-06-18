@@ -18,6 +18,7 @@
   --lightBlue: #5CC8DE;
   --whiteColor: #ffffff;
   --lightGray: #f7f7f7;
+  --accentGray: rgb(228, 228, 228);
   --textColor: #143653;
   --boxShadow: rgba(128, 128, 128, 0.132);
   --textSize: 1.2rem;
@@ -205,7 +206,7 @@ button {
   margin: 8rem 1.5rem 1.5rem 1.5rem;
   display: grid;
   grid-template-columns: 1fr, 1fr;
-  grid-template-rows: 0.1fr, 0.3fr, 2fr, 2fr, 1fr, 1fr, 1fr, 1fr;
+  grid-template-rows: 0.1fr, 0.3fr, 2fr, 2fr, 1fr, 1fr, 1fr, 1fr, 1fr;
   gap: 1.2rem;
   grid-template-areas:
     "menu menu"
@@ -215,7 +216,8 @@ button {
     "box-1 box-2"
     "box-3 box-4"
     "share share"
-    "grafiek grafiek";
+    "grafiek grafiek"
+    "more more";
 }
 
 .dashboard-info p {
@@ -239,11 +241,11 @@ button {
   justify-content: left;
   gap: 2rem;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .share-icon {
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   color: var(--lightBlue);
 }
 
@@ -304,6 +306,10 @@ button {
   grid-area: share;
 }
 
+.more {
+  grid-area: more;
+}
+
 .header-dashboard h1 {
   font-size: 2rem;
 }
@@ -360,10 +366,45 @@ h2 {
   text-transform: uppercase;
 }
 
+/* more */
+.more-link {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 2rem;
+  color: var(--textColor);
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.more-arrow {
+  text-align: right;
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+
+.more-icon {
+  font-size: 1.8rem;
+  color: var(--lightBlue);
+}
+
+.table-more {
+  border-collapse: collapse;
+}
+
+.more-row {
+  border-bottom: 0.5px solid var(--accentGray);
+  height: 4rem;
+}
+
+.arrow {
+  text-align: right;
+}
+
 /* search bar */
 
 .search input {
-  width: 120px;
+  width: 130px;
   height: 25px;
   border-radius: 5px;
   outline: none;
@@ -615,7 +656,7 @@ tr {
   }
 
   .header-dashboard h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -665,7 +706,7 @@ tr {
   .box-3,
   .box-4,
   h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .grafiek p {
@@ -727,7 +768,7 @@ tr {
     font-family: 'Roboto', monospace;
     color: var(--lightBlue);
     font-weight: 500;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .map img {
@@ -735,184 +776,10 @@ tr {
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   tr {
-    height: 3.5rem;
+    height: 3.3rem;
   }
-
-
-  /* TEST */
-
-  /* .image {
-    width: 100px;
-  }
-
-  .world-map {
-    width: 90%;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .world-map .world-map__close {
-    position: absolute;
-    color: var(--darkBlue);
-    top: 15px;
-    right: 15px;
-    font-weight: bold;
-    transition: transform 250ms;
-    transform: translateX(200px);
-  }
-
-  .world-map.view-detail .world-map__close {
-    transform: translate(0);
-    cursor: pointer;
-  }
-
-  .world-map .world-map__world {
-    width: 100%;
-    height: 100%;
-    margin-left: 5rem;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .world-map .world-map__world svg {
-    width: 80%;
-  }
-
-  .world-map .world-map__world path {
-    transition: opacity 250ms, transform 250ms, top 250ms, left 250ms;
-    fill: var(--lightBlue);
-    transform-origin: 80% 80%;
-  }
-
-  .world-map .world-map__world path:hover {
-    opacity: 0.7;
-    cursor: pointer;
-  }
-
-  .world-map .world-map__world path[data-selected=true] {
-    left: 50%;
-    top: 0;
-    height: 100%;
-    position: absolute;
-    transform: scale(10);
-    opacity: 0;
-  }
-
-  .world-map .world-map__world path[data-selected=false] {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .world-map__europe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 50%;
-    top: 10%;
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0);
-    transition: opacity 250ms, transform 250ms;
-  }
-
-  .world-map__europe.active {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-
-  .world-map__europe svg {
-    width: 100%;
-    height: 100%;
-    scale: 1.4;
-  }
-
-  .world-map__europe svg path {
-    transition: opacity 250ms, transform 250ms, top 250ms, left 250ms;
-    fill: var(--lightBlue);
-    transform-origin: 80% 80%;
-  }
-
-  .world-map__europe svg path:hover {
-    opacity: 0.7;
-    cursor: pointer;
-  }
-
-  .world-map__europe svg path[data-selected=true] {
-    left: 50%;
-    top: 0;
-    height: 100%;
-    position: absolute;
-    transform: scale(10);
-    opacity: 0;
-  }
-
-  .world-map__europe svg path[data-selected=false] {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .world-map__list {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 200px;
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: transform 250ms, opacity 250ms;
-  }
-
-
-
-  .world-map__list a {
-    display: block;
-    padding: 15px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-  }
-
-  .world-map__list.active {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  .world-map-wrapper {
-    position: relative;
-    width: 900px;
-    overflow: hidden;
-  }
-
-  .world-map__list--europe {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 200px;
-    opacity: 0;
-    transform: translate(-100%);
-    transition: transform 250ms, opacity 250ms;
-  }
-
-  .world-map__list--europe a {
-    display: block;
-    padding: 15px;
-    border: 1px solid #ccc;
-    margin-bottom: 15px;
-  }
-
-  .world-map__list--europe.active {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  select {
-    padding: 10px;
-    margin-left: 100px;
-    width: 300px;
-  } */
-
 }
