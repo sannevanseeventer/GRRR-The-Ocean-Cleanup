@@ -49,7 +49,7 @@ h2 {
     line-height: 1.2;
     font-weight: 500;
     color: var(--darkBlue);
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
@@ -199,6 +199,17 @@ button {
     }
 }
 
+/* TEST GLOBE */
+/* .viz {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    cursor: grab;
+}
+
+.viz:active {
+    cursor: grabbing;
+} */
 
 
 /* Grid */
@@ -759,7 +770,7 @@ tr {
 
 
     .dashboard-info p {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         line-height: 1.4;
         margin-top: 1rem;
     }
@@ -774,7 +785,8 @@ tr {
         text-align: center;
         color: var(--darkBlue);
         text-transform: uppercase;
-        font-size: 1.6rem;
+        font-weight: bold;
+        font-size: 1.4rem;
     }
 
     .nav-icon {
@@ -822,4 +834,15 @@ tr {
     tr {
         height: 3.3rem;
     }
+
+    /* .viz {
+        max-width: 500px;
+        width: 300px;
+        margin: 0 auto;
+        cursor: grab;
+    }
+
+    .viz:active {
+        cursor: grabbing;
+    } */
 }
