@@ -23,7 +23,13 @@
   --boxShadow: rgba(128, 128, 128, 0.132);
   --textSize: 1.2rem;
   --iconSize: 2rem;
+  --color: rgb(212, 212, 212);
+
 }
+
+
+
+
 
 html {
   font-size: 62.5%;
@@ -318,10 +324,6 @@ button {
   height: 2px;
   width: 18%;
   background-color: var(--lightBlue);
-}
-
-.map img {
-  width: 100%;
 }
 
 .box-1,
@@ -686,7 +688,8 @@ tr {
   }
 
   .map img {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .box-1,
@@ -774,10 +777,6 @@ tr {
     color: var(--lightBlue);
     font-weight: 500;
     font-size: 1.8rem;
-  }
-
-  .map img {
-    margin: 8rem auto;
   }
 
   h3 {
