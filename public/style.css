@@ -403,6 +403,11 @@ h2 {
   text-align: right;
 }
 
+.map img {
+  width: 100%;
+}
+
+
 /* search bar */
 
 .search input {
