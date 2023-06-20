@@ -19,10 +19,14 @@
     --whiteColor: #ffffff;
     --lightGray: #f7f7f7;
     --accentGray: rgb(228, 228, 228);
+    --worldmapGray: #dbdbdb;
+    --worldmapBorder: #8c8c8c;
     --textColor: #143653;
     --boxShadow: rgba(128, 128, 128, 0.132);
     --textSize: 1.2rem;
     --iconSize: 2rem;
+    --color: rgb(212, 212, 212);
+
 }
 
 html {
@@ -199,18 +203,6 @@ button {
     }
 }
 
-/* TEST GLOBE */
-/* .viz {
-    max-width: 500px;
-    width: 100%;
-    margin: 0 auto;
-    cursor: grab;
-}
-
-.viz:active {
-    cursor: grabbing;
-} */
-
 
 /* Grid */
 .container2 {
@@ -291,7 +283,13 @@ button {
 
 .map {
     grid-area: map;
+    border-radius: .5rem;
+    padding: 0.5rem;
+    background-color: var(--whiteColor);
+    box-shadow: var(--boxShadow) 0px 0px 8px;
+    transition: .2s;
 }
+
 
 .box-1 {
     grid-area: box-1;
@@ -377,6 +375,32 @@ h2 {
     text-transform: uppercase;
 }
 
+.button-container {
+    gap: 1rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.zoom-in {
+    width: 1.5rem;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 2px;
+    padding: 0.7rem;
+    color: rgb(148, 147, 147);
+    font-size: 1.3rem;
+}
+
+.zoom-in:hover {
+    background-color: var(--lightBlue);
+    color: var(--whiteColor);
+    cursor: pointer;
+}
+
+
 /* Image */
 .image {
     width: 100%;
@@ -384,9 +408,9 @@ h2 {
     box-shadow: var(--boxShadow) 0px 0px 8px;
 }
 
-.hide {
+/* .hide {
     display: none;
-}
+} */
 
 /* data-container */
 .data-container h2 {
@@ -744,6 +768,9 @@ tr {
         margin: 0 auto;
     }
 
+    .map {
+        padding: 1.5rem;
+    }
 
     .box-1,
     .box-2,

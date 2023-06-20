@@ -132,6 +132,11 @@ d3.select(window).on('resize', function () {
     bubble_map.resize();
 });
 
+bubble_map('bubbles')
+    .on('click', d => {
+        window.location = "https://repulsive-undershirt-duck.cyclic.app/map"
+    })
+
 
 bubble_map.bubbles([
     {
