@@ -1,5 +1,3 @@
-import { log } from "console";
-
 /*=============== LINK ACTIVE ===============*/
 const linkColor = document.querySelectorAll('.nav-link')
 
@@ -43,7 +41,7 @@ function toggleDarkMode() {
         root.style.setProperty('--accentGray', 'rgb(228, 228, 228)');
         root.style.setProperty('--textColor', '#143653');
         root.style.setProperty('--boxShadow', 'rgba(128, 128, 128, 0.132)');
-        darkText.innerHTML = "Light";
+        darkText.innerHTML = "Dark";
         initialTheme = false;
     } else {
         root.style.setProperty('--darkBlue', '#ffffff');
@@ -55,7 +53,7 @@ function toggleDarkMode() {
         root.style.setProperty('--accentGray', '#1a4f7e');
         root.style.setProperty('--textColor', '#ffffff');
         root.style.setProperty('--boxShadow', 'rgba(128, 128, 128, 0.0)');
-        darkText.innerHTML = "Dark";
+        darkText.innerHTML = "Light";
         initialTheme = true;
     }
 }
@@ -82,6 +80,7 @@ $('.count-num').each(function () {
 
 // test
 var bubble_map = new Datamap({
+
     scope: 'world',
     element: document.getElementById("bubbles"),
     responsive: true,
@@ -93,11 +92,7 @@ var bubble_map = new Datamap({
         borderColor: 'var(--worldmapBorder)',
     },
 
-    done: function (datamap) {
-        datamap.svg.selectAll('.datamaps-subunit').on('click', function () {
-            window.location.href = 'https://repulsive-undershirt-duck.cyclic.app/map';
-        });
-    },
+
 
     bubblesConfig: {
         borderWidth: 1,
@@ -130,7 +125,6 @@ var bubble_map = new Datamap({
     },
 });
 
-
 // Pure JavaScript
 window.addEventListener('resize', function () {
     bubble_map.resize();
@@ -144,6 +138,7 @@ d3.select(window).on('resize', function () {
 
 bubble_map.bubbles([
     {
+        id: 132,
         name: 'System 002',
         radius: 10,
         yeild: 15000,

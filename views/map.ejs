@@ -7,7 +7,7 @@
             <div class="container2">
 
                 <div class="header-dashboard">
-                    <h1>Map</h1>
+                    <h1>Dashboard</h1>
                     <div class="search">
                         <input type="text" name="search" placeholder="Search..">
                         <button type="submit" name="button">
@@ -21,41 +21,36 @@
                 </div>
 
 
-                <!-- <div class="panel map">
-                    <img src="/map2.png" id="svgDiv">
-                </div> -->
-
                 <div class="map">
-                    <!-- <img src="/No_colonies_blank_world_map.png"> -->
-                    <!-- <img src="/map2.png" id="svgDiv"> -->
-                    <!-- <div id="container" ></div> -->
-                    <div id="bubbles"></div>
-                    <div class="button-container">
-                        <button class="zoom-in">+</button>
-                        <button class="zoom-in">-</button>
+                    <div id="bubbles">
+                        <div class="button-container">
+                            <button class="zoom-in">+</button>
+                            <button class="zoom-in">-</button>
+                        </div>
                     </div>
+
                 </div>
 
 
-                <div class="panel dashboard-info textblock hide" id="infoContainer">
+                <div class="panel dashboard-info">
 
 
                     <div class="data-container">
-                        <% data.systems.forEach(system=> { if (system.id == 253) { %>
+                        <% data.systems.forEach(system=> { if (system.id == 250) { %>
 
                             <div class="name-container">
                                 <h2>
                                     <%= system.name %>
                                 </h2>
-                                <div class="pulse-container">
+                                <!-- <div class="pulse-container">
                                     <div class="status-pulse">
-                                        <div class="pulse-marker green"></div>
+                                        <div class="pulse-marker blue"></div>
                                     </div>
-                                </div>
-                                <!-- 
+                                </div> -->
+
                                 <h4>
                                     <%= system.status_label %>
-                                </h4> -->
+                                </h4>
 
                             </div>
 
@@ -63,10 +58,13 @@
                                 <%= system.location_description %>
                             </h3>
 
+                            <h4>
+                                Since: <%= system.status_date %>
+                            </h4>
 
-                            <h3>
-                                <%= system.type %>
-                            </h3>
+                            <h4>
+                                Type: <%= system.type %>
+                            </h4>
                             <% } }); %>
                     </div>
                 </div>
@@ -80,17 +78,18 @@
                 </div>
 
                 <div class="panel box-2 hide" id="infoContainer3">
-                    <h2>Interceptor 005</h2>
+                    <h2>Interceptor 006</h2>
                     <p>221.654 kg</p>
                 </div>
 
-                <div class="box-3 hide" id="infoContainer4">
-                    <img class="image" src="/Scherm­afbeelding 2023-06-06 om 11.37.55.png">
+                <div class="box-3">
+                    <img class="image" src="/interceptor007.png">
                 </div>
 
-                <div class="panel box-4 hide" id="infoContainer5">
+                <div class="panel box-4">
                     <h2>Area covered</h2>
                     <p>6744 km2</p>
+                    <h3>equivalent to 1,187,588 football fields' worth of ocean</h3>
                 </div>
 
                 <div class="panel grafiek hide" id="infoContainer6">
@@ -196,7 +195,7 @@
 
                 <div class="panel more hide" id="infoContainer8">
                     <h2>Information</h2>
-                    <p>Interceptor 005 is the second Interceptor deployed in the Klang River, one of the 50 most
+                    <p>Interceptor 006 is the second Interceptor deployed in the Klang River, one of the 50 most
                         polluted rivers globally. This project was largely enabled by successful relationships and the
                         network we managed to build up around the deployment of Interceptor 002 in 2020.</p>
 
@@ -207,6 +206,7 @@
                         deployment in Malaysia ensures short lines between the originating factory and our operations.
                         Operational feedback will be swift, providing learning and sharing experiences for future builds
                         and deployments worldwide.</p>
+
                 </div>
             </div>
         </main>

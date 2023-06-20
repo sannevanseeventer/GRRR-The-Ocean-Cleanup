@@ -516,7 +516,7 @@ h2 {
   width: 3rem;
   height: 3rem;
   padding: .5rem;
-  background-color: var(--darkBlue);
+  background-color: var(--lightBlue);
   color: var(--whiteColor);
   display: flex;
   align-items: center;
@@ -811,10 +811,9 @@ tr {
     justify-content: left;
     align-items: center;
     gap: 1rem;
-    color: var(--darkBlue);
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.4rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: .05rem;
   }
 
   .nav-link li:hover {
@@ -822,7 +821,7 @@ tr {
   }
 
   .nav-icon {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     align-items: center;
   }
 

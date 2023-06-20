@@ -48,6 +48,9 @@ function toggleDarkMode() {
         root.style.setProperty('--darkBlue', '#143653');
         root.style.setProperty('--lightBlue', '#5CC8DE');
         root.style.setProperty('--whiteColor', '#ffffff');
+        root.style.setProperty('--worldmapGray', '#dbdbdb');
+        root.style.setProperty('--worldmapBorder', '#8c8c8c');
+
         root.style.setProperty('--lightGray', '#f7f7f7');
         root.style.setProperty('--accentGray', 'rgb(228, 228, 228)');
         root.style.setProperty('--textColor', '#143653');
@@ -59,6 +62,8 @@ function toggleDarkMode() {
         root.style.setProperty('--lightBlue', '#5CC8DE');
         root.style.setProperty('--whiteColor', '#143653');
         root.style.setProperty('--lightGray', '#0D2437');
+        root.style.setProperty('--worldmapGray', '#0D2437');
+        root.style.setProperty('--worldmapBorder', '#1a4f7e');
         root.style.setProperty('--accentGray', '#1a4f7e');
         root.style.setProperty('--textColor', '#ffffff');
         root.style.setProperty('--boxShadow', 'rgba(128, 128, 128, 0.0)');
@@ -66,7 +71,6 @@ function toggleDarkMode() {
         initialTheme = true;
     }
 }
-
 
 // Counter
 $('.count-num').each(function () {
@@ -92,6 +96,17 @@ $('.count-num').each(function () {
 var bubble_map = new Datamap({
     scope: 'world',
     element: document.getElementById("bubbles"),
+    setProjection: function (element) {
+        var projection = d3.geo.equirectangular()
+            .center([-90, 15])
+            .rotate([0, 0])
+            .scale(400)
+            .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+        var path = d3.geo.path()
+            .projection(projection);
+
+        return { path: path, projection: projection };
+    },
     responsive: true,
     geographyConfig: {
         popupOnHover: false,
@@ -128,7 +143,8 @@ var bubble_map = new Datamap({
         inOperation: '#84ce5f',
         planned: '#6c6c6c',
         signed: '#6c6c6c',
-        installed: '#5CC8DE'
+        installed: '#5CC8DE',
+        selected: 'var(--darkBlue)'
     },
 });
 
@@ -205,14 +221,14 @@ bubble_map.bubbles([
         yeild: 15000,
         country: 'Malaysia',
         significance: 'Interceptor Original 3rd Gen',
-        fillKey: 'inOperation',
+        fillKey: 'selected',
         date: '2023-05-23',
         latitude: 3.01564,
         longitude: 101.37758,
     },
     {
         name: 'Interceptor 006',
-        radius: 10,
+        radius: 20,
         yeild: 15000,
         country: 'Guetemala',
         significance: 'Interceptor Barricade',
@@ -242,17 +258,6 @@ bubble_map.bubbles([
         date: '2022-02-28',
         latitude: 13.67817,
         longitude: 100.55193,
-    },
-    {
-        name: 'Interceptor for Cisadane',
-        radius: 10,
-        yeild: 15000,
-        country: 'Indonesia',
-        significance: 'Interceptor Original 3rd Gen',
-        fillKey: 'signed',
-        date: '2023-05-12',
-        latitude: -6.06122,
-        longitude: 106.63324,
     },
 
     {
