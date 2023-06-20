@@ -91,6 +91,12 @@ var bubble_map = new Datamap({
         borderColor: 'var(--worldmapBorder)',
     },
 
+    done: function (datamap) {
+        datamap.svg.selectAll('.datamaps-subunit').on('click', function () {
+            window.location.href = 'https://repulsive-undershirt-duck.cyclic.app/map';
+        });
+    },
+
     bubblesConfig: {
         borderWidth: 1,
         borderOpacity: 1,
@@ -122,6 +128,7 @@ var bubble_map = new Datamap({
     },
 });
 
+
 // Pure JavaScript
 window.addEventListener('resize', function () {
     bubble_map.resize();
@@ -131,11 +138,6 @@ window.addEventListener('resize', function () {
 d3.select(window).on('resize', function () {
     bubble_map.resize();
 });
-
-bubble_map('bubbles')
-    .on('click', d => {
-        window.location = "https://repulsive-undershirt-duck.cyclic.app/map"
-    })
 
 
 bubble_map.bubbles([
@@ -148,7 +150,7 @@ bubble_map.bubbles([
         fillKey: 'inOperation',
         date: '2023-04-05',
         latitude: 28.56507,
-        longitude: -135.3882,
+        longitude: -135.3882
     },
     {
         name: 'Interceptor 001',
