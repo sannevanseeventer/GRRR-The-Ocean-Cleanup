@@ -19,6 +19,8 @@
   --whiteColor: #ffffff;
   --lightGray: #f7f7f7;
   --accentGray: rgb(228, 228, 228);
+  --worldmapGray: #dbdbdb;
+  --worldmapBorder: #8c8c8c;
   --textColor: #143653;
   --boxShadow: rgba(128, 128, 128, 0.132);
   --textSize: 1.2rem;
@@ -26,10 +28,6 @@
   --color: rgb(212, 212, 212);
 
 }
-
-
-
-
 
 html {
   font-size: 62.5%;
@@ -286,6 +284,11 @@ button {
 
 .map {
   grid-area: map;
+  border-radius: .5rem;
+  padding: 0.5rem;
+  background-color: var(--whiteColor);
+  box-shadow: var(--boxShadow) 0px 0px 8px;
+  transition: .2s;
 }
 
 .box-1 {
@@ -368,6 +371,22 @@ h2 {
   text-transform: uppercase;
 }
 
+#bubbles {
+  position: relative;
+  width: 100%;
+}
+
+.hoverinfo {
+  color: #143653;
+  padding: 4px;
+  border-radius: 1px;
+  background-color: var(--lightGray);
+  box-shadow: transparent;
+  font-size: 12px;
+  border: 1px solid #CCC;
+}
+
+
 /* more */
 .more-link {
   display: flex;
@@ -405,6 +424,23 @@ h2 {
 
 .map img {
   width: 100%;
+}
+
+.button-container {
+  gap: 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.zoom-in {
+  width: 1.5rem;
+  align-items: center;
+  background-color: rgb(235, 235, 235);
+  border-radius: 2px;
+  padding: 0.7rem;
+  color: rgb(148, 147, 147);
+  font-size: 1.3rem;
 }
 
 
@@ -520,7 +556,7 @@ h2 {
 }
 
 /* Pulse */
-.pulse {
+.pulse-marker {
   background: black;
   border-radius: 50%;
   height: 1rem;
@@ -529,19 +565,19 @@ h2 {
   animation: pulse-black 2s infinite;
 }
 
-.pulse.green {
+.pulse-marker.green {
   background: rgb(132, 206, 95);
   box-shadow: 0 0 0 0 rgb(132, 206, 95);
   animation: pulse-green 2s infinite;
 }
 
-.pulse.blue {
+.pulse-marker.blue {
   background: var(--lightBlue);
   box-shadow: 0 0 0 0 var(--lightBlue);
   animation: pulse-blue 2s infinite;
 }
 
-.pulse.gray {
+.pulse-marker.gray {
   background: rgb(176, 176, 176);
   box-shadow: 0 0 0 0 rgb(176, 176, 176);
   animation: pulse-gray 2s infinite;
@@ -790,5 +826,11 @@ tr {
 
   tr {
     height: 3.3rem;
+  }
+
+  #bubbles {
+    position: relative;
+    width: 100%;
+    height: auto;
   }
 }

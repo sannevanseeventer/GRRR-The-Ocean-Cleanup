@@ -564,8 +564,10 @@ h2 {
     text-anchor: middle;
 }
 
+
+
 /* Pulse */
-.pulse {
+.pulse-marker {
     background: black;
     border-radius: 50%;
     height: 1rem;
@@ -574,19 +576,19 @@ h2 {
     animation: pulse-black 2s infinite;
 }
 
-.pulse.green {
+.pulse-marker.green {
     background: rgb(132, 206, 95);
     box-shadow: 0 0 0 0 rgb(132, 206, 95);
     animation: pulse-green 2s infinite;
 }
 
-.pulse.blue {
+.pulse-marker.blue {
     background: var(--lightBlue);
     box-shadow: 0 0 0 0 var(--lightBlue);
     animation: pulse-blue 2s infinite;
 }
 
-.pulse.gray {
+.pulse-marker.gray {
     background: rgb(176, 176, 176);
     box-shadow: 0 0 0 0 rgb(176, 176, 176);
     animation: pulse-gray 2s infinite;

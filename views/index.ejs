@@ -30,7 +30,7 @@
 
                 <div class="panel box-2">
                     <h2>Last 30 days</h2>
-                    <p>443.415 kg</p>
+                    <p id="weight-removed">443.415 kg</p>
                 </div>
 
                 <div class="panel box-3">
@@ -81,15 +81,22 @@
 
                 <div class="panel map">
                     <!-- <img src="/No_colonies_blank_world_map.png"> -->
-                    <img src="/map2.png" id="svgDiv">
+                    <!-- <img src="/map2.png" id="svgDiv"> -->
+                    <!-- <div id="container" ></div> -->
+                    <div id="bubbles"></div>
+                    <div class="button-container">
+                        <button class="zoom-in">+</button>
+                        <button class="zoom-in">-</button>
+                    </div>
                 </div>
 
-
                 <div class="panel dashboard-info">
-                    <span>Track our progress on this dashboard and learn more about the upcoming and deployed cleanup
+                    <span>Track our progress on this dashboard and learn more about the upcoming and deployed
+                        cleanup
                         solutions.</span>
 
-                    <p>Our goal is to reduce floating plastic by 90% by 2040. According to our research, about 80% of
+                    <p>Our goal is to reduce floating plastic by 90% by 2040. According to our research, about 80%
+                        of
                         riverine plastic
                         pollution stems from 1000 rivers. </p>
 
@@ -105,7 +112,7 @@
                             <td class="dot">
                                 <div class="pulse-container">
                                     <div class="status-pulse">
-                                        <div class="pulse green"></div>
+                                        <div class="pulse-marker green"></div>
                                         <h3>In operation</h3>
                                     </div>
                                 </div>
@@ -119,7 +126,7 @@
                             <td class="dot">
                                 <div class="pulse-container">
                                     <div class="status-pulse">
-                                        <div class="pulse green"></div>
+                                        <div class="pulse-marker green"></div>
                                         <h3>Harvesting</h3>
                                     </div>
                                 </div>
@@ -133,7 +140,7 @@
                             <td class="dot">
                                 <div class="pulse-container">
                                     <div class="status-pulse">
-                                        <div class="pulse blue"></div>
+                                        <div class="pulse-marker blue"></div>
                                         <h3>Installed for testing</h3>
                                     </div>
                                 </div>
@@ -147,7 +154,7 @@
                             <td class="dot">
                                 <div class="pulse-container">
                                     <div class="status-pulse">
-                                        <div class="pulse gray"></div>
+                                        <div class="pulse-marker gray"></div>
                                         <h3>Planned</h3>
                                     </div>
                                 </div>
@@ -161,7 +168,7 @@
                             <td class="dot">
                                 <div class="pulse-container">
                                     <div class="status-pulse">
-                                        <div class="pulse gray"></div>
+                                        <div class="pulse-marker gray"></div>
                                         <h3>Contract signed</h3>
                                     </div>
                                 </div>
