@@ -249,8 +249,12 @@ button {
 }
 
 .share-icon {
-  font-size: 2.1rem;
+  font-size: 2.5rem;
   color: var(--lightBlue);
+}
+
+.share-icon:hover {
+  color: var(--darkBlue);
 }
 
 .dashboard-info span {
@@ -398,6 +402,10 @@ h2 {
   text-transform: capitalize;
 }
 
+.more-link:hover {
+  color: var(--lightBlue);
+}
+
 .more-arrow {
   text-align: right;
   font-size: 1.8rem;
@@ -408,6 +416,7 @@ h2 {
   font-size: 1.8rem;
   color: var(--lightBlue);
 }
+
 
 .table-more {
   border-collapse: collapse;
@@ -428,6 +437,8 @@ h2 {
 
 .button-container {
   gap: 1rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -442,6 +453,13 @@ h2 {
   color: rgb(148, 147, 147);
   font-size: 1.3rem;
 }
+
+.zoom-in:hover {
+  background-color: var(--lightBlue);
+  color: var(--whiteColor);
+  cursor: pointer;
+}
+
 
 
 /* search bar */
@@ -733,6 +751,10 @@ tr {
     margin: 0 auto;
   }
 
+  .map {
+    padding: 1.5rem;
+  }
+
   .box-1,
   .box-2,
   .box-4,
@@ -758,7 +780,7 @@ tr {
   }
 
   .share-icon {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 
   .social-icons {
@@ -778,22 +800,40 @@ tr {
     line-height: 1.4;
   }
 
+  .nav-link {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
   .nav-link li {
-    text-align: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
     color: var(--darkBlue);
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.4rem;
   }
 
+  .nav-link li:hover {
+    color: var(--lightBlue);
+  }
+
   .nav-icon {
     font-size: 2.5rem;
+    align-items: center;
   }
 
   .line {
     height: 2px;
     width: 6%;
     background-color: var(--lightBlue);
+  }
+
+  .search input {
+    width: 190px;
   }
 
   .circular-chart {

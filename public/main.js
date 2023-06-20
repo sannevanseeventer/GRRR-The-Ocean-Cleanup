@@ -124,12 +124,12 @@ var bubble_map = new Datamap({
 
 // Pure JavaScript
 window.addEventListener('resize', function () {
-    map.resize();
+    bubble_map.resize();
 });
 
 // Alternatively with d3
 d3.select(window).on('resize', function () {
-    map.resize();
+    bubble_map.resize();
 });
 
 
