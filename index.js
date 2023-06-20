@@ -31,6 +31,14 @@ app.get('/map', (request, response) => {
   })
 })
 
+app.get('/styleguide', (request, response) => {
+  fetchJson(connectionJson).then((data) => {
+    console.log(data)
+    response.render('styleguide', { data: data })
+  })
+})
+
+
 
 
 // Stel het poortnummer in en start express

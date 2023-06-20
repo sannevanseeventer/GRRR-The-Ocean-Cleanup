@@ -36,12 +36,12 @@ function toggleDarkMode() {
         root.style.setProperty('--whiteColor', '#ffffff');
         root.style.setProperty('--worldmapGray', '#dbdbdb');
         root.style.setProperty('--worldmapBorder', '#8c8c8c');
-
+        root.style.setProperty('--worldmapbuttons', 'rgb(235, 235, 235)');
         root.style.setProperty('--lightGray', '#f7f7f7');
         root.style.setProperty('--accentGray', 'rgb(228, 228, 228)');
         root.style.setProperty('--textColor', '#143653');
         root.style.setProperty('--boxShadow', 'rgba(128, 128, 128, 0.132)');
-        darkText.innerHTML = "Dark";
+        darkText.innerHTML = "Light";
         initialTheme = false;
     } else {
         root.style.setProperty('--darkBlue', '#ffffff');
@@ -50,10 +50,11 @@ function toggleDarkMode() {
         root.style.setProperty('--lightGray', '#0D2437');
         root.style.setProperty('--worldmapGray', '#0D2437');
         root.style.setProperty('--worldmapBorder', '#1a4f7e');
+        root.style.setProperty('--worldmapbuttons', '#5CC8DE');
         root.style.setProperty('--accentGray', '#1a4f7e');
         root.style.setProperty('--textColor', '#ffffff');
         root.style.setProperty('--boxShadow', 'rgba(128, 128, 128, 0.0)');
-        darkText.innerHTML = "Light";
+        darkText.innerHTML = "Dark";
         initialTheme = true;
     }
 }

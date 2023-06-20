@@ -21,6 +21,7 @@
   --accentGray: rgb(228, 228, 228);
   --worldmapGray: #dbdbdb;
   --worldmapBorder: #8c8c8c;
+  --worldmapbuttons: rgb(235, 235, 235);
   --textColor: #143653;
   --boxShadow: rgba(128, 128, 128, 0.132);
   --textSize: 1.2rem;
@@ -447,10 +448,10 @@ h2 {
 .zoom-in {
   width: 1.5rem;
   align-items: center;
-  background-color: rgb(235, 235, 235);
+  background-color: var(--worldmapGray);
   border-radius: 2px;
   padding: 0.7rem;
-  color: rgb(148, 147, 147);
+  color: var(--worldmapBorder);
   font-size: 1.3rem;
 }
 
@@ -780,7 +781,7 @@ tr {
   }
 
   .share-icon {
-    font-size: 2.3rem;
+    font-size: 2.6rem;
   }
 
   .social-icons {
@@ -813,6 +814,7 @@ tr {
     gap: 1rem;
     font-weight: 600;
     font-size: 1.5rem;
+    text-transform: uppercase;
     letter-spacing: .05rem;
   }
 
@@ -871,5 +873,146 @@ tr {
     position: relative;
     width: 100%;
     height: auto;
+  }
+
+  /* Styleguide */
+
+  .styleguide-container {
+    padding-left: 22rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+  }
+
+  .styleguide-panel {
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: var(--whiteColor);
+    transition: .2s;
+    overflow: scroll;
+    height: 100%;
+  }
+
+  .styleguide-container h4 {
+    width: 100%;
+    font-size: 2.5em;
+    color: var(--textColor);
+    font-family: 'Proxima', sans-serif;
+    text-transform: uppercase;
+  }
+
+  .styleguide-container ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .styleguide-list li {
+    height: 12em;
+    width: 12em;
+    border-radius: 1em;
+  }
+
+  .color-panel {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+  }
+
+  .primary-colors {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+  }
+
+  .primary-colors li {
+    display: flex;
+    width: 22em;
+    height: 22em;
+    border: 1px solid var(--worldmapBorder)
+  }
+
+  .accent-colors li {
+    width: 16em;
+    height: 16em;
+  }
+
+  .accent-colors {
+    margin-bottom: 3%;
+  }
+
+  .color-name {
+    margin-top: 1%;
+    font-family: var(--secondairFont);
+    text-transform: uppercase;
+  }
+
+  .border-color-FEFEFE {
+    background-color: var(--whiteColor);
+    border: .2px solid var(--worldmapBorder);
+  }
+
+  .light-blue-5CC8DE {
+    background-color: var(--lightBlue);
+
+  }
+
+  .dark-blue-143653 {
+    background-color: var(--darkBlue);
+  }
+
+  .light-gray-f7f7f7 {
+    background-color: var(--lightGray);
+  }
+
+
+  .styleguide-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .panel h1 {
+    margin-top: 5%;
+  }
+
+  .styleguide-fonts {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .styleguide-h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .lowecase {
+    margin-top: 20%;
+  }
+
+  .primary-font {
+    width: 50%;
+  }
+
+  .secundary-font {
+    font-family: var(--secondairFont);
+    text-transform: uppercase;
+    font-size: .6rem;
+  }
+
+  .styleguide-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  pre {
+    padding: 1rem 1rem;
+    background-color: var(--worldmapGray);
+    width: 16rem;
   }
 }

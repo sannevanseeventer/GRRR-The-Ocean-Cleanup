@@ -393,10 +393,10 @@ h2 {
 .zoom-in {
     width: 1.5rem;
     align-items: center;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--worldmapGray);
     border-radius: 2px;
     padding: 0.7rem;
-    color: rgb(148, 147, 147);
+    color: var(--worldmapBorder);
     font-size: 1.3rem;
 }
 
