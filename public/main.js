@@ -1,3 +1,5 @@
+import { log } from "console";
+
 /*=============== LINK ACTIVE ===============*/
 const linkColor = document.querySelectorAll('.nav-link')
 
