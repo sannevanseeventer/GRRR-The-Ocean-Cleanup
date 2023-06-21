@@ -240,7 +240,7 @@ button {
 }
 
 .search input::placeholder {
-    color: #888;
+    color: var(--darkBlue);
     font-size: 1.3rem;
 }
 

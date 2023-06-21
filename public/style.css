@@ -365,7 +365,8 @@ h2 {
 }
 
 .search input::placeholder {
-  color: #888;
+  color: var(--darkBlue);
+  ;
   font-size: 1.3rem;
 }
 
@@ -851,19 +852,6 @@ tr {
     width: 100%;
     height: auto;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
