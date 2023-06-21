@@ -50,7 +50,7 @@ function toggleDarkMode() {
         root.style.setProperty('--lightGray', '#0D2437');
         root.style.setProperty('--worldmapGray', '#0D2437');
         root.style.setProperty('--worldmapBorder', '#1a4f7e');
-        root.style.setProperty('--worldmapbuttons', '#5CC8DE');
+        root.style.setProperty('--worldmapbuttons', '#0D2437');
         root.style.setProperty('--accentGray', '#1a4f7e');
         root.style.setProperty('--textColor', '#ffffff');
         root.style.setProperty('--boxShadow', 'rgba(128, 128, 128, 0.0)');

@@ -149,63 +149,6 @@ button {
   font-size: 2.5rem;
 }
 
-@media screen and (min-width: 767px) {
-
-  /*=====  NAV =====*/
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20rem;
-    height: 100vh;
-    box-shadow: var(--boxShadow) 0px 0px 8px;
-  }
-
-  .nav-list {
-    display: block;
-  }
-
-  .nav img {
-    width: 20rem;
-    height: auto;
-    padding: 2rem 3.5rem;
-  }
-
-  .nav {
-    height: 100%;
-    flex-direction: column;
-    justify-content: left;
-    gap: 6rem;
-    overflow: hidden;
-  }
-
-  .nav-link {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 4rem;
-  }
-
-  .nav-link li {
-    display: block;
-  }
-
-  .nav-link:hover {
-    color: var(--first-color);
-  }
-
-  .nav-icon {
-    font-size: 3rem;
-  }
-
-  .active {
-    color: var(--first-color);
-  }
-}
-
-
-
 /* Grid */
 .container2 {
   margin: 8rem 1.5rem 1.5rem 1.5rem;
@@ -448,7 +391,7 @@ h2 {
 .zoom-in {
   width: 1.5rem;
   align-items: center;
-  background-color: var(--worldmapGray);
+  background-color: var(--worldmapbuttons);
   border-radius: 2px;
   padding: 0.7rem;
   color: var(--worldmapBorder);
@@ -460,8 +403,6 @@ h2 {
   color: var(--whiteColor);
   cursor: pointer;
 }
-
-
 
 /* search bar */
 
@@ -540,7 +481,7 @@ h2 {
   display: block;
   margin: 1.3rem auto;
   margin-bottom: 0;
-  max-width: 80%;
+  width: 100px;
   max-height: 250px;
 }
 
@@ -662,9 +603,6 @@ h2 {
   }
 }
 
-/* grafiek */
-
-
 /* Status */
 table {
   width: 100%;
@@ -700,21 +638,108 @@ tr {
   width: 20%;
 }
 
+/* Breakpoints small screen */
+@media (min-width:700px) {
+  .container2 {
+    margin: 8rem 1.5rem 1.5rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: 0.1fr, 0.3fr, 2fr, 2fr, 1fr, 1fr, 1fr;
+    gap: 1.2rem;
+    grid-template-areas:
+      "menu menu menu menu"
+      "header-dashboard header-dashboard header-dashboard header-dashboard"
+      "dashboard-info dashboard-info dashboard-info box-1"
+      "map map map map"
+      "box-2 box-2 box-3 box-4"
+      "share grafiek grafiek grafiek"
+      "more more more more";
+  }
+
+  .active {
+    color: var(--lightBlue);
+  }
+
+}
+
 /* Breakpoints medium screen */
 @media (min-width:992px) {
   .container2 {
-    margin: 1.5rem 2rem 2rem 22.3rem;
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    grid-template-rows: 0.2fr 0.1fr 2.5fr 1fr 1fr 1fr;
-    gap: 1.5rem;
+    margin: 5rem 2rem 2rem 22.3rem;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 0.01fr 0.1fr 0.3fr 0.4fr 0.4fr 0.6fr;
     grid-template-areas:
-      "menu menu"
-      "header-dashboard header-dashboard"
-      "grafiek map"
-      "box-1 box-2"
-      "box-3 box-4"
-      "dashboard-info share";
+      "menu menu menu menu menu"
+      "header-dashboard header-dashboard header-dashboard header-dashboard header-dashboard"
+      "dashboard-info dashboard-info map map map"
+      "box-1 box-2 map map map"
+      "box-3 box-4 share share share"
+      "grafiek grafiek more more more";
+  }
+
+  .map .button-container {
+    position: absolute;
+  }
+
+  /*=====  NAV =====*/
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20rem;
+    height: 100vh;
+    box-shadow: var(--boxShadow) 0px 0px 8px;
+  }
+
+  .nav-list {
+    display: block;
+  }
+
+  .nav img {
+    width: 20rem;
+    height: auto;
+    padding: 2rem 3.5rem;
+  }
+
+  .nav {
+    height: 100%;
+    flex-direction: column;
+    justify-content: left;
+    gap: 6rem;
+    overflow: hidden;
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 4rem;
+    gap: 1rem;
+  }
+
+  .nav-link li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+  }
+
+
+  .nav-link li:hover {
+    color: var(--lightBlue);
+  }
+
+  .nav-icon {
+    font-size: 2.5rem;
+    align-items: center;
+  }
+
+  .active {
+    color: var(--lightBlue);
   }
 
   .header-dashboard h1 {
@@ -773,6 +798,18 @@ tr {
   .box-3,
   .box-4,
   h2 {
+    font-size: 1.5rem;
+  }
+
+  .grafiek h2 {
+    font-size: 1.8rem;
+  }
+
+  .more h2 {
+    font-size: 1.8rem;
+  }
+
+  .share h2 {
     font-size: 1.8rem;
   }
 
@@ -818,12 +855,17 @@ tr {
     letter-spacing: .05rem;
   }
 
-  .nav-link li:hover {
+
+  .nav-link:hover {
+    color: var(--lightBlue);
+  }
+
+  .active {
     color: var(--lightBlue);
   }
 
   .nav-icon {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     align-items: center;
   }
 
@@ -841,7 +883,7 @@ tr {
     display: flex;
     justify-content: center;
     margin: 10px auto;
-    max-width: 40%;
+    width: 100px;
     max-height: 250px;
   }
 
@@ -874,6 +916,22 @@ tr {
     width: 100%;
     height: auto;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* Styleguide */
 
@@ -963,6 +1021,11 @@ tr {
     background-color: var(--lightGray);
   }
 
+  .white-white-fffff {
+    background-color: var(--whiteColor);
+  }
+
+
 
   .styleguide-list {
     display: flex;
@@ -998,7 +1061,6 @@ tr {
   }
 
   .secundary-font {
-    font-family: var(--secondairFont);
     text-transform: uppercase;
     font-size: .6rem;
   }
@@ -1008,11 +1070,5 @@ tr {
     flex-direction: row;
     gap: 2rem;
     margin-top: 1rem;
-  }
-
-  pre {
-    padding: 1rem 1rem;
-    background-color: var(--worldmapGray);
-    width: 16rem;
   }
 }
