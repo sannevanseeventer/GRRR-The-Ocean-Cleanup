@@ -1,11 +1,14 @@
+/* Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+/* Proxima font */
 @font-face {
     font-family: 'Proxima';
     src: url("/ProximaNovaFont.otf") format("opentype") weight("normal");
     src: url("/Proxima-Nova-Bold.otf") format("opentype") weight("bold");
 }
 
+/* Base */
 * {
     margin: 0;
     padding: 0;
@@ -76,19 +79,7 @@ button {
     text-align: center;
 }
 
-::-webkit-scrollbar {
-    width: .8rem;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--lightGray);
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--blueColor);
-}
-
-/*=====  NAV =====*/
+/* Nav*/
 .navbar {
     position: fixed;
     top: 0;
@@ -100,7 +91,6 @@ button {
     z-index: 100;
 }
 
-
 .nav {
     height: 5.5rem;
     display: flex;
@@ -111,7 +101,6 @@ button {
     overflow: hidden;
 }
 
-
 .nav img {
     left: 0;
     top: 0;
@@ -120,7 +109,6 @@ button {
     padding: 1rem;
     background-color: var(--lightBlue);
 }
-
 
 .nav-list {
     display: flex;
@@ -167,54 +155,19 @@ button {
         "grafiek grafiek";
 }
 
-.dashboard-info p {
-    font-size: 1.3rem;
-    line-height: 1.4;
-    color: var(--textColor);
-    margin-top: 0.5rem;
-    font-family: 'Proxima', sans-serif;
+.panel {
+    border-radius: .5rem;
+    padding: 1.5rem;
+    background-color: var(--whiteColor);
+    box-shadow: var(--boxShadow) 0px 0px 8px;
+    transition: .2s;
 }
 
-.grafiek p {
-    font-size: 1.3rem;
-    line-height: 1.4;
-    color: var(--textColor);
-    margin-top: 0.5rem;
-    font-family: 'Proxima', sans-serif;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: left;
-    gap: 2rem;
-    align-items: center;
-    margin-top: 2rem;
-}
-
-.share-icon {
-    font-size: 2.1rem;
-    color: var(--lightBlue);
-}
-
-.dashboard-info span {
-    font-size: 1.3rem;
-    line-height: 1.4;
-    color: var(--textColor);
-    font-weight: bold;
-    font-family: 'Proxima', sans-serif;
-}
-
+/* Grid areas */
 .header-dashboard {
     display: flex;
     justify-content: space-between;
     grid-area: header-dashboard;
-}
-
-.col {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: .9rem;
 }
 
 .menu {
@@ -233,7 +186,6 @@ button {
     box-shadow: var(--boxShadow) 0px 0px 8px;
     transition: .2s;
 }
-
 
 .box-1 {
     grid-area: box-1;
@@ -263,6 +215,7 @@ button {
     grid-area: more;
 }
 
+/* header styling */
 .header-dashboard h1 {
     font-size: 2rem;
 }
@@ -273,10 +226,90 @@ button {
     background-color: var(--lightBlue);
 }
 
-.map img {
-    width: 100%;
+/* Search bar */
+.search input {
+    width: 130px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: .5rem;
+    background: var(--whiteColor);
+    box-shadow: var(--boxShadow) 0px 0px 8px;
+    border: none;
+    color: var(--textColor);
 }
 
+.search input::placeholder {
+    color: #888;
+    font-size: 1.3rem;
+}
+
+.search button {
+    width: 30px;
+    height: 25px;
+    border: none;
+    margin-right: 1.5rem;
+    border-radius: 0 5px 5px 0;
+    color: var(--textColor);
+    transition-property: all;
+    transition-duration: 0.5s;
+    position: absolute;
+    right: 0;
+    outline: none;
+}
+
+.search button i {
+    font-size: 1.2rem;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.search button:hover i {
+    transform: scale(1.1);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+/* Dashboard-info styling */
+.dashboard-info p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: var(--textColor);
+    margin-top: 0.5rem;
+    font-family: 'Proxima', sans-serif;
+}
+
+.dashboard-info span {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: var(--textColor);
+    font-weight: bold;
+    font-family: 'Proxima', sans-serif;
+}
+
+/* share styling */
+.grafiek p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: var(--textColor);
+    margin-top: 0.5rem;
+    font-family: 'Proxima', sans-serif;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.share-icon {
+    font-size: 2.1rem;
+    color: var(--lightBlue);
+}
+
+/* Boxes styling */
 .box-1,
 .box-2,
 .box-3,
@@ -301,57 +334,13 @@ h2 {
     margin-top: .5rem;
 }
 
-
-.panel {
-    border-radius: .5rem;
-    padding: 1.5rem;
-    background-color: var(--whiteColor);
-    box-shadow: var(--boxShadow) 0px 0px 8px;
-    transition: .2s;
-}
-
-.menu-container {
-    display: flex;
-    justify-content: left;
-    gap: 2rem;
-    align-items: center;
-}
-
-.menu-container li {
-    font-size: 1.2rem;
-    color: grey;
-    /* font-weight: bold; */
-    text-transform: uppercase;
-}
-
-.button-container {
-    gap: 1rem;
-    bottom: .5rem;
-    left: .5rem;
+.col {
     display: flex;
     justify-content: left;
     align-items: center;
+    gap: .9rem;
 }
 
-
-.zoom-in {
-    width: 1.5rem;
-    align-items: center;
-    background-color: var(--worldmapbuttons);
-    border-radius: 2px;
-    padding: 0.7rem;
-    color: var(--worldmapBorder);
-    font-size: 1.3rem;
-}
-
-.zoom-in:hover {
-    background-color: var(--lightBlue);
-    color: var(--whiteColor);
-    cursor: pointer;
-}
-
-
-/* Image */
 .image {
     width: 100%;
     height: 100%;
@@ -359,8 +348,7 @@ h2 {
     box-shadow: var(--boxShadow) 0px 0px 8px;
 }
 
-
-/* data-container */
+/* Data-container styling */
 .data-container h2 {
     font-size: 1.9rem;
 
@@ -385,7 +373,7 @@ h2 {
 }
 
 
-/* more */
+/* more styling */
 .more p {
     font-family: 'Proxima', sans-serif;
     color: var(--textColor);
@@ -430,72 +418,6 @@ h2 {
 
 .arrow {
     text-align: right;
-}
-
-/* search bar */
-
-.search input {
-    width: 130px;
-    height: 25px;
-    border-radius: 5px;
-    outline: none;
-    padding-left: .5rem;
-    background: var(--whiteColor);
-    box-shadow: var(--boxShadow) 0px 0px 8px;
-    border: none;
-    color: var(--textColor);
-}
-
-.search input::placeholder {
-    color: #888;
-    font-size: 1.3rem;
-}
-
-.search button {
-    width: 30px;
-    height: 25px;
-    border: none;
-    margin-right: 1.5rem;
-    border-radius: 0 5px 5px 0;
-    color: var(--textColor);
-    transition-property: all;
-    transition-duration: 0.5s;
-    position: absolute;
-    right: 0;
-    outline: none;
-}
-
-.search button i {
-    font-size: 1.2rem;
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-
-.search button:hover i {
-    transform: scale(1.1);
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-
-
-/* Scroll to top */
-.scroll-top {
-    position: absolute;
-    bottom: 1%;
-    right: 2%;
-    width: 3rem;
-    height: 3rem;
-    padding: .5rem;
-    background-color: var(--lightBlue);
-    color: var(--whiteColor);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.scroll-top i {
-    font-size: var(--fs16);
 }
 
 /* Pulse */
@@ -587,7 +509,7 @@ h2 {
 }
 
 
-/* Status */
+/* System statuses styling */
 table {
     width: 100%;
 }
@@ -620,6 +542,26 @@ tr {
 
 .amount {
     width: 20%;
+}
+
+/* Scroll to top */
+.scroll-top {
+    position: absolute;
+    bottom: 1%;
+    right: 2%;
+    width: 3rem;
+    height: 3rem;
+    padding: .5rem;
+    background-color: var(--lightBlue);
+    color: var(--whiteColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.scroll-top i {
+    font-size: var(--fs16);
 }
 
 /* Breakpoints small screen */
@@ -664,7 +606,7 @@ tr {
         font-size: 2.5rem;
     }
 
-    /*=====  NAV =====*/
+    /*  Nav */
     .navbar {
         position: fixed;
         top: 0;
@@ -711,7 +653,6 @@ tr {
         letter-spacing: .05rem;
     }
 
-
     .nav-link li:hover {
         color: var(--lightBlue);
     }
@@ -731,7 +672,6 @@ tr {
 }
 
 /* Breakpoints large screen */
-
 @media (min-width:1200px) {
     .container2 {
         margin: 5rem 2rem 2rem 22.3rem;
