@@ -1,4 +1,5 @@
-/*=============== LINK ACTIVE ===============*/
+// Active link
+
 const linkColor = document.querySelectorAll('.nav-link')
 
 function colorLink() {
@@ -7,32 +8,6 @@ function colorLink() {
 }
 
 linkColor.forEach(l => l.addEventListener('click', colorLink))
-
-
-// De click funcite
-// const infoContainer = document.getElementById("infoContainer")
-// const infoContainer2 = document.getElementById("infoContainer2")
-// const infoContainer3 = document.getElementById("infoContainer3")
-// const infoContainer4 = document.getElementById("infoContainer4")
-// const infoContainer5 = document.getElementById("infoContainer5")
-// const infoContainer6 = document.getElementById("infoContainer6")
-// const infoContainer7 = document.getElementById("infoContainer7")
-// const infoContainer8 = document.getElementById("infoContainer8")
-
-// document.getElementById("svgDiv").onclick = function () {
-//     infoToggle()
-// };
-// function infoToggle() {
-//     infoContainer.classList.toggle("hide")
-//     infoContainer2.classList.toggle("hide")
-//     infoContainer3.classList.toggle("hide")
-//     infoContainer4.classList.toggle("hide")
-//     infoContainer5.classList.toggle("hide")
-//     infoContainer6.classList.toggle("hide")
-//     infoContainer7.classList.toggle("hide")
-//     infoContainer8.classList.toggle("hide")
-//     window.location.href = '#infoContainer';
-// }
 
 //Darkmode
 
@@ -73,7 +48,7 @@ function toggleDarkMode() {
     }
 }
 
-// Counter
+// Counter trash removed in total
 $('.count-num').each(function () {
     var $this = $(this),
         countTo = $this.attr('data-count');
@@ -93,7 +68,7 @@ $('.count-num').each(function () {
         });
 });
 
-// test
+// Map with Interceptors
 var bubble_map = new Datamap({
     scope: 'world',
     element: document.getElementById("bubbles"),

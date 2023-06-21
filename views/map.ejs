@@ -1,11 +1,19 @@
+<!-- Head -->
 <%- include('./partials/headMap.ejs') %>
 
+    <!-- Navigation -->
     <%- include('./partials/nav.ejs') %>
 
-
+        <!-- Start main section -->
         <main>
             <div class="container2">
 
+                <!-- Blue line -->
+                <div class="menu">
+                    <div class="line"></div>
+                </div>
+
+                <!-- Title + Searchbar -->
                 <div class="header-dashboard">
                     <h1>Dashboard</h1>
                     <div class="search">
@@ -16,23 +24,8 @@
                     </div>
                 </div>
 
-                <div class="menu">
-                    <div class="line"></div>
-                </div>
-
-
-                <div class="map">
-                    <div id="bubbles"></div>
-                    <!-- <div class="button-container">
-                        <button class="zoom-in">+</button>
-                        <button class="zoom-in">-</button>
-                    </div> -->
-                </div>
-
-
+                <!-- Dashboard-info: general information from database -->
                 <div class="panel dashboard-info">
-
-
                     <div class="data-container">
                         <% data.systems.forEach(system=> { if (system.id == 250) { %>
 
@@ -40,16 +33,10 @@
                                 <h2>
                                     <%= system.name %>
                                 </h2>
-                                <!-- <div class="pulse-container">
-                                    <div class="status-pulse">
-                                        <div class="pulse-marker blue"></div>
-                                    </div>
-                                </div> -->
 
                                 <h4>
                                     <%= system.status_label %>
                                 </h4>
-
                             </div>
 
                             <h3>
@@ -67,7 +54,13 @@
                     </div>
                 </div>
 
-                <div class="panel box-1 hide" id="infoContainer2">
+                <!-- Map: map with interceptors -->
+                <div class="map">
+                    <div id="bubbles"></div>
+                </div>
+
+                <!-- Box 1: trash removed in total -->
+                <div class="panel box-1">
                     <h2>Trash removed in total</h2>
                     <div class="col">
                         <p class="count-num" data-count="600000000">353874119</p>
@@ -75,48 +68,52 @@
                     </div>
                 </div>
 
-                <div class="panel box-2 hide" id="infoContainer3">
+                <!-- Box 2: trash remover Interceptor -->
+                <div class="panel box-2">
                     <h2>Interceptor 006</h2>
                     <p>221.654 kg</p>
                 </div>
 
+                <!-- Box 3: image of Interceptor -->
                 <div class="box-3">
                     <img class="image" src="/interceptor007.png">
                 </div>
 
+                <!-- Box 4: area of ocean covered -->
                 <div class="panel box-4">
                     <h2>Area covered</h2>
                     <p>6744 km2</p>
                     <h3>equivalent to 1,187,588 football fields' worth of ocean</h3>
                 </div>
 
-                <div class="panel grafiek hide" id="infoContainer6">
+                <!-- Grafiek: share with icons -->
+                <div class="panel grafiek">
                     <h2>Share this dashboard</h2>
                     <p>Cleaning up the world's ocean is a global initiative requiring the support of
-                        governments and
-                        individuals all over the world. Spread the word about our work to help bring awareness to
-                        the
-                        mission of
-                        cleaner oceans.</p>
-                    <div class="social-icons">
+                        governments and individuals all over the world. Spread the word about our work to help bring
+                        awareness to the
+                        mission of cleaner oceans.</p>
 
-                        <a href="#" class="share-icon">
-                            <i class='bx bxl-facebook-square'></i>
-                        </a>
-                        <a href="#" class="share-icon">
-                            <i class='bx bxl-twitter'></i>
-                        </a>
-                        <a href="#" class="share-icon">
+                    <div class="social-icons">
+                        <!-- Facebook -->
+                        <a href="#" class="share-icon" aria-label="share on facebook">
+                            <i class='bx bxl-facebook-square'></i></a>
+                        <!-- Twitter -->
+                        <a href="#" class="share-icon" aria-label="share on twitter">
+                            <i class='bx bxl-twitter'></i></a>
+                        <!-- Linkedin -->
+                        <a href="#" class="share-icon" aria-label="share on linkedin">
                             <i class='bx bxl-linkedin-square'></i>
                         </a>
-                        <a href="#" class="share-icon">
+                        <!-- Mail -->
+                        <a href="#" class="share-icon" aria-label="share with mail">
                             <i class='bx bxs-envelope'></i>
                         </a>
                     </div>
-
                 </div>
 
-                <div class="panel share hide" id="infoContainer7">
+                <!-- Share: table system statuses -->
+                <div class="panel share">
                     <h2>System statuses</h2>
                     <table>
                         <tr>
@@ -191,7 +188,8 @@
                     </table>
                 </div>
 
-                <div class="panel more hide" id="infoContainer8">
+                <!-- More: information about interceptor -->
+                <div class="panel more">
                     <h2>Information</h2>
                     <p>Interceptor 006 is the second Interceptor deployed in the Klang River, one of the 50 most
                         polluted rivers globally. This project was largely enabled by successful relationships and the
@@ -205,10 +203,12 @@
                 </div>
             </div>
         </main>
+        <!-- End main section -->
 
-
+        <!-- Scroll to top button -->
         <a href="#top" class="scroll-top">
             <i class="fas fa-arrow-up"></i>
         </a>
 
+        <!-- Footer -->
         <%- include('./partials/footMap.ejs') %>

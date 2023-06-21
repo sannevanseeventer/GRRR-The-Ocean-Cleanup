@@ -1,10 +1,21 @@
+<!-- Head -->
 <%- include('./partials/head.ejs') %>
 
+    <!-- Navigation -->
     <%- include('./partials/nav.ejs') %>
 
 
+        <!-- Start main section -->
         <main>
+
             <div class="container2">
+
+                <!-- Blue line -->
+                <div class="menu">
+                    <div class="line"></div>
+                </div>
+
+                <!-- Title + Searchbar -->
                 <div class="header-dashboard">
                     <h1>Dashboard</h1>
                     <div class="search">
@@ -12,14 +23,10 @@
                         <button type="submit" name="search button" aria-label="search button">
                             <i class="fas fa-search"></i>
                         </button>
-
                     </div>
                 </div>
 
-                <div class="menu">
-                    <div class="line"></div>
-                </div>
-
+                <!-- Box 1: total trash removed -->
                 <div class="panel box-1">
                     <h2>Trash removed in total</h2>
                     <div class="col">
@@ -28,11 +35,29 @@
                     </div>
                 </div>
 
+                <!-- Box 2: last 30 days removed -->
                 <div class="panel box-2">
                     <h2>Last 30 days removed</h2>
                     <p id="weight-removed">443.415 kg</p>
                 </div>
 
+                <!-- Box 3: percentage since 2013 -->
+                <div class="panel box-3">
+                    <h2>% removed since 2013 </h2>
+                    <div class="single-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart green">
+                            <path class="circle-bg" d="M18 2.0845
+                                  a 15.9155 15.9155 0 0 1 0 31.831
+                                  a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
+                                  a 15.9155 15.9155 0 0 1 0 31.831
+                                  a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage">65%</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Box 4: percentage in 2040 -->
                 <div class="panel box-4">
                     <h2>% removed in 2040</h2>
                     <div class="single-chart">
@@ -48,21 +73,7 @@
                     </div>
                 </div>
 
-                <div class="panel box-3">
-                    <h2>% removed since 2013 </h2>
-                    <div class="single-chart">
-                        <svg viewBox="0 0 36 36" class="circular-chart green">
-                            <path class="circle-bg" d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831" />
-                            <path class="circle" stroke-dasharray="60, 100" d="M18 2.0845
-                          a 15.9155 15.9155 0 0 1 0 31.831
-                          a 15.9155 15.9155 0 0 1 0 -31.831" />
-                            <text x="18" y="20.35" class="percentage">65%</text>
-                        </svg>
-                    </div>
-                </div>
-
+                <!-- Grafiek: share swith icons -->
                 <div class="panel grafiek">
                     <h2>Share this dashboard</h2>
                     <p>Cleaning up the world's ocean is a global initiative requiring the support of
@@ -70,48 +81,47 @@
                         individuals all over the world. Spread the word about our work to help bring awareness to the
                         mission of
                         cleaner oceans.</p>
-                    <div class="social-icons">
 
+                    <div class="social-icons">
+                        <!-- Facebook -->
                         <a href="#" class="share-icon" aria-label="share on facebook">
                             <i class='bx bxl-facebook-square'></i>
                         </a>
+                        <!-- Twitter -->
                         <a href="#" class="share-icon" aria-label="share on twitter">
                             <i class='bx bxl-twitter'></i>
                         </a>
+                        <!-- Linkedin -->
                         <a href="#" class="share-icon" aria-label="share on linkedin">
                             <i class='bx bxl-linkedin-square'></i>
                         </a>
+                        <!-- Mail -->
                         <a href="#" class="share-icon" aria-label="share mail">
                             <i class='bx bxs-envelope'></i>
                         </a>
                     </div>
-
                 </div>
 
-
-
+                <!-- Map: map with interceptors -->
                 <div class="map">
                     <a href="/map">
                         <div id="bubbles"></div>
                     </a>
                 </div>
 
-
+                <!-- Dashboard-info: info about dashboard -->
                 <div class="panel dashboard-info">
-                    <span>Track our progress on this dashboard and learn more about the upcoming and deployed
-                        cleanup
+                    <span>Track our progress on this dashboard and learn more about the upcoming and deployed cleanup
                         solutions.</span>
 
-                    <p>Our goal is to reduce floating plastic by 90% by 2040. According to our research, about 80%
-                        of
-                        riverine plastic
-                        pollution stems from 1000 rivers. </p>
+                    <p>Our goal is to reduce floating plastic by 90% by 2040. According to our research, about 80% of
+                        riverine plastic pollution stems from 1000 rivers. </p>
 
-                    <p>To effectively clean up the oceans, we need to both clean up
-                        the plastic
-                        already in the ocean and intercept plastic on its way through rivers.</p>
+                    <p>To effectively clean up the oceans, we need to both clean up the plastic already in the ocean and
+                        intercept plastic on its way through rivers.</p>
                 </div>
 
+                <!-- Share: table system statuses -->
                 <div class="panel share">
                     <h2>System statuses</h2>
                     <table>
@@ -187,6 +197,7 @@
                     </table>
                 </div>
 
+                <!-- More: table more information links -->
                 <div class="panel more">
                     <h2>More about</h2>
                     <table class="table-more">
@@ -197,7 +208,6 @@
                                     Our river technology
                                 </a>
                             </td>
-
                             <td class="arrow">
                                 <i class='bx bx-chevron-right more-arrow'></i>
                             </td>
@@ -210,7 +220,6 @@
                                     The economic impact
                                 </a>
                             </td>
-
                             <td class="arrow">
                                 <i class='bx bx-chevron-right more-arrow'></i>
                             </td>
@@ -223,7 +232,6 @@
                                     Plastic sources
                                 </a>
                             </td>
-
                             <td class="arrow">
                                 <i class='bx bx-chevron-right more-arrow'></i>
                             </td>
@@ -244,6 +252,7 @@
                         <span>
                             <tr class="more-row">
                         </span>
+
                         <td class="more-icon">
                             <a href="#" class="more-link">
                                 <i class='bx bx-envelope more-icon'></i>
@@ -256,11 +265,13 @@
                         </tr>
                     </table>
                 </div>
-
         </main>
+        <!-- End main section -->
 
+        <!-- Scroll to top button -->
         <a href="#top" class="scroll-top" aria-label="scroll to top">
             <i class="fas fa-arrow-up"></i>
         </a>
 
+        <!-- Footer -->
         <%- include('./partials/foot.ejs') %>

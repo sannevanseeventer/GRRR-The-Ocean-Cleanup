@@ -1,11 +1,14 @@
+/* Robot font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+/* Procima font */
 @font-face {
   font-family: 'Proxima';
   src: url("/ProximaNovaFont.otf") format("opentype") weight("normal");
   src: url("/Proxima-Nova-Bold.otf") format("opentype") weight("bold");
 }
 
+/* Base */
 * {
   margin: 0;
   padding: 0;
@@ -24,10 +27,9 @@
   --worldmapbuttons: rgb(235, 235, 235);
   --textColor: #143653;
   --boxShadow: rgba(128, 128, 128, 0.132);
+  --color: rgb(212, 212, 212);
   --textSize: 1.2rem;
   --iconSize: 2rem;
-  --color: rgb(212, 212, 212);
-
 }
 
 html {
@@ -62,7 +64,6 @@ h3 {
   font-weight: 500;
 }
 
-
 ul,
 li {
   list-style: none;
@@ -77,19 +78,7 @@ button {
   text-align: center;
 }
 
-::-webkit-scrollbar {
-  width: .8rem;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--lightGray);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--blueColor);
-}
-
-/*=====  NAV =====*/
+/* Nav */
 .navbar {
   position: fixed;
   top: 0;
@@ -101,7 +90,6 @@ button {
   z-index: 100;
 }
 
-
 .nav {
   height: 5.5rem;
   display: flex;
@@ -112,7 +100,6 @@ button {
   overflow: hidden;
 }
 
-
 .nav img {
   left: 0;
   top: 0;
@@ -121,7 +108,6 @@ button {
   padding: 1rem;
   background-color: var(--lightBlue);
 }
-
 
 .nav-list {
   display: flex;
@@ -168,58 +154,19 @@ button {
     "more more";
 }
 
-.dashboard-info p {
-  font-size: 1.3rem;
-  line-height: 1.4;
-  color: var(--textColor);
-  margin-top: 0.5rem;
-  font-family: 'Proxima', sans-serif;
+.panel {
+  border-radius: .5rem;
+  padding: 1.5rem;
+  background-color: var(--whiteColor);
+  box-shadow: var(--boxShadow) 0px 0px 8px;
+  transition: .2s;
 }
 
-.grafiek p {
-  font-size: 1.3rem;
-  line-height: 1.4;
-  color: var(--textColor);
-  margin-top: 0.5rem;
-  font-family: 'Proxima', sans-serif;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: left;
-  gap: 2rem;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.share-icon {
-  font-size: 2.5rem;
-  color: var(--lightBlue);
-}
-
-.share-icon:hover {
-  color: var(--darkBlue);
-}
-
-.dashboard-info span {
-  font-size: 1.3rem;
-  line-height: 1.4;
-  color: var(--textColor);
-  font-weight: bold;
-  font-family: 'Proxima', sans-serif;
-}
-
+/* Grid areas */
 .header-dashboard {
   display: flex;
   justify-content: space-between;
   grid-area: header-dashboard;
-}
-
-.col {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: .9rem;
 }
 
 .menu {
@@ -267,6 +214,7 @@ button {
   grid-area: more;
 }
 
+/* header styling + line */
 .header-dashboard h1 {
   font-size: 2rem;
 }
@@ -276,6 +224,50 @@ button {
   width: 18%;
   background-color: var(--lightBlue);
 }
+
+/* dashboard-info styling */
+.dashboard-info p {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--textColor);
+  margin-top: 0.5rem;
+  font-family: 'Proxima', sans-serif;
+}
+
+.dashboard-info span {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--textColor);
+  font-weight: bold;
+  font-family: 'Proxima', sans-serif;
+}
+
+/* share styling */
+.grafiek p {
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--textColor);
+  margin-top: 0.5rem;
+  font-family: 'Proxima', sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.share-icon {
+  font-size: 2.5rem;
+  color: var(--lightBlue);
+}
+
+.share-icon:hover {
+  color: var(--darkBlue);
+}
+
 
 .box-1,
 .box-2,
@@ -297,15 +289,7 @@ h2 {
 }
 
 
-.panel {
-  border-radius: .5rem;
-  padding: 1.5rem;
-  background-color: var(--whiteColor);
-  box-shadow: var(--boxShadow) 0px 0px 8px;
-  transition: .2s;
-}
-
-.menu-container {
+/* .menu-container {
   display: flex;
   justify-content: left;
   gap: 2rem;
@@ -315,9 +299,8 @@ h2 {
 .menu-container li {
   font-size: 1.2rem;
   color: grey;
-  /* font-weight: bold; */
   text-transform: uppercase;
-}
+} */
 
 #bubbles {
   position: relative;
@@ -332,6 +315,13 @@ h2 {
   box-shadow: transparent;
   font-size: 12px;
   border: 1px solid #CCC;
+}
+
+.col {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: .9rem;
 }
 
 

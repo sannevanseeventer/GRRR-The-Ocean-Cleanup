@@ -1,4 +1,4 @@
-/*=============== LINK ACTIVE ===============*/
+// Active link
 const linkColor = document.querySelectorAll('.nav-link')
 
 function colorLink() {
@@ -8,17 +8,6 @@ function colorLink() {
 
 linkColor.forEach(l => l.addEventListener('click', colorLink))
 
-
-// De click funcite
-// const infoContainer = document.getElementById("infoContainer")
-
-// document.getElementById("svgDiv").onclick = function () {
-//     infoToggle()
-// };
-// function infoToggle() {
-//     infoContainer.classList.toggle("hide")
-//     window.location.href = '#infoContainer';
-// }
 
 //Darkmode
 
@@ -59,7 +48,8 @@ function toggleDarkMode() {
     }
 }
 
-// Counter
+
+// Counter trash removed in total
 $('.count-num').each(function () {
     var $this = $(this),
         countTo = $this.attr('data-count');
@@ -79,7 +69,7 @@ $('.count-num').each(function () {
         });
 });
 
-// test
+// Map with Interceptors
 var bubble_map = new Datamap({
 
     scope: 'world',
@@ -92,8 +82,6 @@ var bubble_map = new Datamap({
         borderOpacity: 1,
         borderColor: 'var(--worldmapBorder)',
     },
-
-
 
     bubblesConfig: {
         borderWidth: 1,
