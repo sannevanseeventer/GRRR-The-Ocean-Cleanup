@@ -1,7 +1,7 @@
 # proof-of-concept
 Ontwerp en maak een data driven online concept voor een opdrachtgever
 
-# Ulti.TV Commentators dashboard
+# Dashboard The Ocean Cleanup
 <img width="814" alt="image" src="https://github.com/Knetters/performance-matters-optimized-website/assets/112857190/c2eaa029-4fc5-4b41-ac16-b211000562a3">
 <img width="814" alt="image" src="https://github.com/Knetters/performance-matters-optimized-website/assets/112857190/de0db92f-1a7d-4b6e-b80a-7fef5ed44411">
 
