@@ -2,8 +2,7 @@
 Ontwerp en maak een data driven online concept voor een opdrachtgever
 
 # Dashboard The Ocean Cleanup
-<img width="814" alt="image" src="https://github.com/Knetters/performance-matters-optimized-website/assets/112857190/c2eaa029-4fc5-4b41-ac16-b211000562a3">
-<img width="814" alt="image" src="https://github.com/Knetters/performance-matters-optimized-website/assets/112857190/de0db92f-1a7d-4b6e-b80a-7fef5ed44411">
+![mockup1](https://github.com/sannevanseeventer/proof-of-concept/assets/112857444/e3ab08ad-f2bf-4d5f-af2e-f12592118772)
 
 
 <h3>📚Inhoudsopgave</h3>
@@ -15,7 +14,7 @@ Ontwerp en maak een data driven online concept voor een opdrachtgever
 </ul>
 
 <h3 id="#Opdracht"> 👨🏼‍💼 Opdracht</h3>
-Ontwerp en maak met een team een website voor een opdrachtgever waarbij je verschillende performance technieken toepast.
+Ontwerp en maak een data driven online concept voor een opdrachtgever
 
         
 <h3 id="#Gebruik"> 👩🏽‍💻 Gebruik van website</h3>
