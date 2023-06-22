@@ -1,6 +1,3 @@
-# proof-of-concept
-Ontwerp en maak een data driven online concept voor een opdrachtgever.
-
 # Dashboard The Ocean Cleanup
 ![mockup1](https://github.com/sannevanseeventer/proof-of-concept/assets/112857444/e3ab08ad-f2bf-4d5f-af2e-f12592118772)
 
