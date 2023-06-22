@@ -27,9 +27,7 @@ Voor de opdrachtgever GRRR heb ik een concept mogen ontwerpen voor een dashboard
 <li>Om je project online te zetten, kun je gebruik maken van 'Cyclic'</li>
         
 <h3 id="#Kenmerken"> 📱 Kenmerken</h3>
-Dit project is gemaakt met Node, Express, EJS. Wij hebben gebruik gemaakt van progressive enhancement. Deze aanpak begint met een eenvoudige, toegankelijke versie van de website die werkt op alle apparaten. 
-Hierna hebben wij meerdere geavanceerde functies en visuele elementen toegevoegd voor gebruikers die over modernere apparaten en browsers beschikken. 
-Hierdoor kan iedereen de inhoud van de website bekijken en gebruiken maar voor gebruikers met nieuwere apparaten zal de website meer functionaliteit hebben.
+Dit project is gemaakt met Node, Express, EJS. Ik heb gebruik gemaakt van d3.js om de kaart te implementeren waarop te zien is waar en welke Interceptors op dit moment gebruikt worden. Per Interceptor kan je zien hoeveel afval er is opgeruimd in totaal en in de laatste 30 dagen.
 
 <h4>Tools</h4>
 <ul>
