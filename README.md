@@ -18,6 +18,7 @@ Voor de opdrachtgever GRRR heb ik een concept mogen ontwerpen voor een dashboard
 </ul>
    
 <h3 id="#Gebruik"> 👩🏽‍💻 Gebruik van website</h3>
+Vanuit de website van The Ocean Cleanup kom je terecht bij het dashboard. Hierop is een wereldkaart te zien met vde verschillende Interceptors, het aantal opgeruimd plastic tot nu toe, de system statuses en er is een mogelijkheid tot het delen van het dashboard of te navigeren naar verschillende links. Ook is er een darkmode beschikbaar. 
 
 <h3 id="Installatie"> 🛠Installatie</h3>
 <li>Clone deze repository.</li>
