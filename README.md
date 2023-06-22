@@ -4,6 +4,7 @@
 Voor de opdrachtgever GRRR heb ik een concept mogen ontwerpen voor een dashboard van The Ocean Cleanup. De bedoeling was om de data van de verschillende Interceptors en hoeveelheid opgeruimd plastic zo overzichtelijk mogelijk weer te geven.  
 
 <br>
+<br>
 
 ![mockup1](https://github.com/sannevanseeventer/proof-of-concept/assets/112857444/e3ab08ad-f2bf-4d5f-af2e-f12592118772)
 
