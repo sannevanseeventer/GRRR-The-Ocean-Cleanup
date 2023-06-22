@@ -103,10 +103,33 @@
                 </div>
 
                 <!-- Map: map with interceptors -->
-                <div class="map">
+                <div id="js-enabled" class="map">
                     <a href="/map">
                         <div id="bubbles"></div>
                     </a>
+                </div>
+
+                <div id="js-disabled" class="map">
+
+                    <div class="dropdown">
+                        <input type="checkbox" id="my-dropdown" value="" name="my-checkbox">
+                        <label for="my-dropdown" data-toggle="dropdown">
+                            <h3>Choose Interceptor <i class='bx bx-chevron-down'></i></h3>
+                        </label>
+                        <ul>
+                            <li><a href="/map">Interceptor 001</a></li>
+                            <li><a href="/map">Interceptor 002</a></li>
+                            <li><a href="/map">Interceptor 003</a></li>
+                            <li><a href="/map">Interceptor 004</a></li>
+                            <li><a href="/map">Interceptor 005</a></li>
+                            <li><a href="/map">Interceptor 006</a></li>
+                            <li><a href="/map">System 002</a></li>
+                            <li><a href="/map">Kingston Harbour</a></li>
+                        </ul>
+                    </div>
+
+                    <img src="/map-nojs.png">
+
                 </div>
 
                 <!-- Dashboard-info: info about dashboard -->

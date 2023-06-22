@@ -564,6 +564,16 @@ tr {
     font-size: var(--fs16);
 }
 
+/* Progressive Enhancement */
+.js-enabled {
+    display: none;
+}
+
+.map img {
+    width: 100%;
+    height: auto;
+}
+
 /* Breakpoints small screen */
 @media (min-width:700px) {
     .container2 {

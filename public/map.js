@@ -1,3 +1,7 @@
+// Progressive Enhancement
+document.getElementById('js-enabled').style.display = 'block';
+document.getElementById('js-disabled').style.display = 'none';
+
 // Active link
 
 const linkColor = document.querySelectorAll('.nav-link')
