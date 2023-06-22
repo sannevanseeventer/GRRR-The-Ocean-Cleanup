@@ -46,8 +46,8 @@ Dit project is gemaakt met Node, Express, EJS. Ik heb gebruik gemaakt van d3.js 
 <li>📟 HTML</li>
         <li>🎨 CSS</li>
         <li>🕹️ JavaScript</li>
-        <li>🥜 Node </li>
- <li> Express </li>
+ <li> 🚃 Express </li>
+ <li> 🗺 D3 </li>
   </ul>      
 
 ## Licentie
