@@ -8,6 +8,11 @@ Voor de opdrachtgever GRRR heb ik een concept mogen ontwerpen voor een dashboard
 
 ![mockup1](https://github.com/sannevanseeventer/proof-of-concept/assets/112857444/e3ab08ad-f2bf-4d5f-af2e-f12592118772)
 
+<br>
+
+![mockup](https://github.com/sannevanseeventer/GRRR-The-Ocean-Cleanup/assets/112857444/a877971a-1e72-48b2-9fe6-2ba2ad251406)
+
+
 
 <h3>📚Inhoudsopgave</h3>
 <ul>
