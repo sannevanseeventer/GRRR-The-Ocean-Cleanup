@@ -35,7 +35,6 @@ Hierdoor kan iedereen de inhoud van de website bekijken en gebruiken maar voor g
 <ul>
         <li> 🖥️ Visual Studio Code</li>
         <li> 🖥️ Cyclic </li>
-        <li> 🖥️ Arc </li>
 </ul>
 
 <h4>Gebruikte technieken</h4>
@@ -44,9 +43,8 @@ Hierdoor kan iedereen de inhoud van de website bekijken en gebruiken maar voor g
         <li>🎨 CSS</li>
         <li>🕹️ JavaScript</li>
         <li>🥜 Node </li>
+ <li> Express </li>
   </ul>      
-
-_Dit projects is gemaakt door Sanne, Thomas en Milan._
 
 ## Licentie
 
