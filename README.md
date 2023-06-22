@@ -1,4 +1,8 @@
 # Dashboard The Ocean Cleanup
+
+<h3 id="#Opdracht"> 👨🏼‍💼 Opdracht</h3>
+Voor de opdrachtgever GRRR heb ik een concept mogen ontwerpen voor een dashboard van The Ocean Cleanup. De bedoeling was om de data van de verschillende Interceptors en hoeveelheid opgeruimd plastic zo overzichtelijk mogelijk weer te geven.  
+
 ![mockup1](https://github.com/sannevanseeventer/proof-of-concept/assets/112857444/e3ab08ad-f2bf-4d5f-af2e-f12592118772)
 
 
@@ -9,11 +13,7 @@
  <li><a href="#Installatie"> 🛠Installatie </a></li>
 <li><a href="#Kenmerken"> 📱 Kenmerken en uitleg Node, Express en EJS</a></li> 
 </ul>
-
-<h3 id="#Opdracht"> 👨🏼‍💼 Opdracht</h3>
-Voor de opdrachtgever GRRR heb ik een concept mogen ontwerpen voor een dashboard van The Ocean Cleanup. De bedoeling was om de data van de verschillende Interceptors en hoeveelheid opgeruimd plastic zo overzichtelijk mogelijk weer te geven.  
-
-        
+   
 <h3 id="#Gebruik"> 👩🏽‍💻 Gebruik van website</h3>
 
 <h3 id="Installatie"> 🛠Installatie</h3>
